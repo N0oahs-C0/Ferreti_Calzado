@@ -8,7 +8,7 @@ namespace EntidadesFerreti
 {
     public class Ventas
     {
-        public Ventas(int id, int fkpedido, string fecha_hora)
+        public Ventas(int id, int fkpedido)
         {
             Id = id;
             Fkpedido = fkpedido;

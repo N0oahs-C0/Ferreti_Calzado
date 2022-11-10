@@ -1,0 +1,6 @@
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\EntidadesFerreti\bin\Debug\EntidadesFerreti.dll
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\EntidadesFerreti\bin\Debug\EntidadesFerreti.pdb
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\EntidadesFerreti\obj\Debug\EntidadesFerreti.csproj.AssemblyReference.cache
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\EntidadesFerreti\obj\Debug\EntidadesFerreti.csproj.CoreCompileInputs.cache
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\EntidadesFerreti\obj\Debug\EntidadesFerreti.dll
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\EntidadesFerreti\obj\Debug\EntidadesFerreti.pdb

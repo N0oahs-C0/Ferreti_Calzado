@@ -1,0 +1,16 @@
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\ManejadorFerreti\bin\Debug\ManejadorFerreti.dll
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\ManejadorFerreti\bin\Debug\ManejadorFerreti.pdb
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\ManejadorFerreti\bin\Debug\Acceso_Ferreti.dll
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\ManejadorFerreti\bin\Debug\Crud.dll
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\ManejadorFerreti\bin\Debug\EntidadesFerreti.dll
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\ManejadorFerreti\bin\Debug\ConectarBd.dll
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\ManejadorFerreti\bin\Debug\MySql.Data.dll
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\ManejadorFerreti\bin\Debug\Acceso_Ferreti.pdb
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\ManejadorFerreti\bin\Debug\EntidadesFerreti.pdb
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\ManejadorFerreti\bin\Debug\Crud.pdb
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\ManejadorFerreti\bin\Debug\ConectarBd.pdb
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\ManejadorFerreti\obj\Debug\ManejadorFerreti.csproj.AssemblyReference.cache
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\ManejadorFerreti\obj\Debug\ManejadorFerreti.csproj.CoreCompileInputs.cache
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\ManejadorFerreti\obj\Debug\ManejadorFerreti.csproj.CopyComplete
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\ManejadorFerreti\obj\Debug\ManejadorFerreti.dll
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\ManejadorFerreti\obj\Debug\ManejadorFerreti.pdb

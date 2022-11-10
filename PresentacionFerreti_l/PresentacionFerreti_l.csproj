@@ -36,6 +36,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FmrVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrVentas.Designer.cs">
+      <DependentUpon>FmrVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmrVentasA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrVentasA.Designer.cs">
+      <DependentUpon>FmrVentasA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -60,6 +74,14 @@
       <Project>{86cebed1-a822-4706-bc13-ea0a1b7e72e9}</Project>
       <Name>ManejadorFerreti</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FmrVentas.resx">
+      <DependentUpon>FmrVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrVentasA.resx">
+      <DependentUpon>FmrVentasA.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
