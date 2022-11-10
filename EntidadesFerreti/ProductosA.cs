@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace EntidadesFerreti
 {
-    public class Class1
+    public class ProductosA
     {
+        public int id { get; set; }
+        public string producto { get; set; }
+        public int cantidad { get; set; }
     }
 }
