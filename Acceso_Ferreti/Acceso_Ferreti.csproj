@@ -52,5 +52,11 @@
     <Compile Include="Aventas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntidadesFerreti\EntidadesFerreti.csproj">
+      <Project>{80e74f2e-deed-4609-a2af-9097f34e26b3}</Project>
+      <Name>EntidadesFerreti</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

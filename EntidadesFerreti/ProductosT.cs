@@ -8,5 +8,15 @@ namespace EntidadesFerreti
 {
     public class ProductosT
     {
+        public ProductosT(int id, string productos, int cantidad)
+        {
+            Id = id;
+            Productos = productos;
+            Cantidad = cantidad;
+        }
+
+        public int Id { get; set; }
+        public string Productos { get; set; }
+        public int Cantidad { get; set; }
     }
 }

@@ -47,5 +47,19 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Acceso_Ferreti\Acceso_Ferreti.csproj">
+      <Project>{4e3cc59b-3465-4c27-98dd-fe530b7e888f}</Project>
+      <Name>Acceso_Ferreti</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntidadesFerreti\EntidadesFerreti.csproj">
+      <Project>{80e74f2e-deed-4609-a2af-9097f34e26b3}</Project>
+      <Name>EntidadesFerreti</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ManejadorFerreti\ManejadorFerreti.csproj">
+      <Project>{86cebed1-a822-4706-bc13-ea0a1b7e72e9}</Project>
+      <Name>ManejadorFerreti</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
