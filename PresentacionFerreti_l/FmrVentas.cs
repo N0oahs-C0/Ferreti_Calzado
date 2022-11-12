@@ -40,12 +40,39 @@ namespace PresentacionFerreti_l
 
         private void dgtVentas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            ventas.Id = int.Parse(dgtVentas.Rows[fila].Cells[0].Value.ToString());
+            ventas.Fkpedido = int.Parse(dgtVentas.Rows[fila].Cells[0].Value.ToString());
+            switch (col)
+            {
+                case 3:
+                    {
+                        FmrVentasA fa = new FmrVentasA();
+                        fa.ShowDialog();
+                        Actualizar();
+                    } break;
+                case 4:
+                    {
+                        mv.Borrar(ventas);
+                    } break;
+                default:
+                    break;
+            }
         }
 
         private void dgtVentas_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
+            fila = e.RowIndex;
+            col = e.ColumnIndex;
+        }
 
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            Actualizar();
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            Actualizar();
         }
 
         void Actualizar()
