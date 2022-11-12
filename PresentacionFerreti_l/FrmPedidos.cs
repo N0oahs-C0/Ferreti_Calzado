@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using ManejadorFerreti;
 using EntidadesFerreti;
 
-namespace PresentacionFerreti
+namespace PresentacionFerreti_l
 {
     public partial class FrmPedidos : Form
     {

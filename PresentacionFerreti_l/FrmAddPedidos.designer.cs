@@ -1,4 +1,4 @@
-﻿namespace PresentacionFerreti
+﻿namespace PresentacionFerreti_l
 {
     partial class FrmAddPedidos
     {
@@ -103,7 +103,7 @@
             // 
             // BtnSalir
             // 
-            this.BtnSalir.BackgroundImage = global::PresentacionFerreti.Properties.Resources.cerrar;
+            //this.BtnSalir.BackgroundImage = global::PresentacionFerreti.Properties.Resources.cerrar;
             this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnSalir.Location = new System.Drawing.Point(415, 31);
             this.BtnSalir.Name = "BtnSalir";

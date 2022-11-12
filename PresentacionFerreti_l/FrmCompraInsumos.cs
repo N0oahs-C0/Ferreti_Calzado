@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EntidadesFerreti;
 using ManejadorFerreti;
-namespace PresentacionFerreti
+namespace PresentacionFerreti_l
 {
     public partial class FrmCompraInsumos : Form
     {

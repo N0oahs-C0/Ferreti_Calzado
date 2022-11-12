@@ -11,7 +11,7 @@ using EntidadesFerreti;
 using ManejadorFerreti;
 
 
-namespace PresentacionFerreti
+namespace PresentacionFerreti_l
 {
     public partial class FrmAddInsumo : Form
     {

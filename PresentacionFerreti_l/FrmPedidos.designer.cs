@@ -1,4 +1,4 @@
-﻿namespace PresentacionFerreti
+﻿namespace PresentacionFerreti_l
 {
     partial class FrmPedidos
     {
@@ -80,7 +80,7 @@
             // 
             // BtnSalir
             // 
-            this.BtnSalir.BackgroundImage = global::PresentacionFerreti.Properties.Resources.cerrar;
+            //this.BtnSalir.BackgroundImage = global::PresentacionFerreti.Properties.Resources.cerrar;
             this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnSalir.Location = new System.Drawing.Point(717, 36);
             this.BtnSalir.Name = "BtnSalir";
@@ -91,7 +91,7 @@
             // 
             // BtnBuscar
             // 
-            this.BtnBuscar.BackgroundImage = global::PresentacionFerreti.Properties.Resources.buscar;
+            //this.BtnBuscar.BackgroundImage = global::PresentacionFerreti.Properties.Resources.buscar;
             this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnBuscar.Location = new System.Drawing.Point(686, 102);
             this.BtnBuscar.Name = "BtnBuscar";
@@ -102,7 +102,7 @@
             // 
             // BtnAgregar
             // 
-            this.BtnAgregar.BackgroundImage = global::PresentacionFerreti.Properties.Resources.anadir;
+            //this.BtnAgregar.BackgroundImage = global::PresentacionFerreti.Properties.Resources.anadir;
             this.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnAgregar.Location = new System.Drawing.Point(728, 102);
             this.BtnAgregar.Name = "BtnAgregar";
