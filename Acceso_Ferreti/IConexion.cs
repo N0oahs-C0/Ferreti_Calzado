@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AccesoDatos
+namespace Acceso_Ferreti
 {
     internal interface IConexion
     {
