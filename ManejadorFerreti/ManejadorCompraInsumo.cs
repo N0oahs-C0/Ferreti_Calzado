@@ -5,8 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AccesoDatos;
-using crud;
+using Acceso_Ferreti;
+using Crud;
 
 namespace ManejadorFerreti
 {

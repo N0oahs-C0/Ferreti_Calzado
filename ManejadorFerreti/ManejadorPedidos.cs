@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AccesoDatos;
-using EntidadesFerreti;
-using crud;
+using Acceso_Ferreti;
+using Crud;
 using System.Drawing;
 
 namespace ManejadorFerreti
