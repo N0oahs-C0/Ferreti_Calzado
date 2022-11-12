@@ -36,6 +36,7 @@ namespace PresentacionFerreti_l
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgtVentas = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnbuscar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgtVentas)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +58,7 @@ namespace PresentacionFerreti_l
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(46, 34);
             this.btnAgregar.TabIndex = 1;
-            this.btnAgregar.Text = "mas";
+            this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
             // 
@@ -102,14 +103,25 @@ namespace PresentacionFerreti_l
             // 
             this.txtBuscar.Location = new System.Drawing.Point(72, 81);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(575, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(528, 20);
             this.txtBuscar.TabIndex = 6;
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.Location = new System.Drawing.Point(617, 73);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(46, 34);
+            this.btnbuscar.TabIndex = 7;
+            this.btnbuscar.Text = "Busca";
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // FmrVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(727, 382);
+            this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dgtVentas);
             this.Controls.Add(this.panel1);
@@ -136,5 +148,6 @@ namespace PresentacionFerreti_l
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgtVentas;
         private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Button btnbuscar;
     }
 }
