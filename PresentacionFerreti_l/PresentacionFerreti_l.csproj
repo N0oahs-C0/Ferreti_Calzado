@@ -58,6 +58,48 @@
     <Compile Include="FmrVentasA.Designer.cs">
       <DependentUpon>FmrVentasA.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAddCompraInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddCompraInsumos.designer.cs">
+      <DependentUpon>FrmAddCompraInsumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddInsumo.designer.cs">
+      <DependentUpon>FrmAddInsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddPedidos.designer.cs">
+      <DependentUpon>FrmAddPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAlmacenInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAlmacenInsumos.designer.cs">
+      <DependentUpon>FrmAlmacenInsumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCompraInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompraInsumos.designer.cs">
+      <DependentUpon>FrmCompraInsumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPedidos.designer.cs">
+      <DependentUpon>FrmPedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -81,6 +123,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FmrVentasA.resx">
       <DependentUpon>FmrVentasA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddCompraInsumos.resx">
+      <DependentUpon>FrmAddCompraInsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddInsumo.resx">
+      <DependentUpon>FrmAddInsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddPedidos.resx">
+      <DependentUpon>FrmAddPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAlmacenInsumos.resx">
+      <DependentUpon>FrmAlmacenInsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompraInsumos.resx">
+      <DependentUpon>FrmCompraInsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPedidos.resx">
+      <DependentUpon>FrmPedidos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

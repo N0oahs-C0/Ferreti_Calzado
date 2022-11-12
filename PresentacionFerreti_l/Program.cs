@@ -12,7 +12,7 @@ namespace PresentacionFerreti_l
         [STAThread]
         static void Main()
         {
-            Application.Run(new FmrVentas());
+            Application.Run(new frmMenu());
         }
     }
 }
