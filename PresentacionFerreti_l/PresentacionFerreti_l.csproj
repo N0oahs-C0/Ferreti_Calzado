@@ -58,6 +58,30 @@
     <Compile Include="FmrVentasA.Designer.cs">
       <DependentUpon>FmrVentasA.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAddCompraInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddCompraInsumos.Designer.cs" />
+    <Compile Include="FrmAddInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddInsumo.Designer.cs" />
+    <Compile Include="FrmAddPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddPedidos.Designer.cs" />
+    <Compile Include="FrmAlmacenInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAlmacenInsumos.Designer.cs" />
+    <Compile Include="FrmCompraInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompraInsumos.Designer.cs" />
+    <Compile Include="FrmPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPedidos.Designer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -82,6 +106,12 @@
     <EmbeddedResource Include="FmrVentasA.resx">
       <DependentUpon>FmrVentasA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddCompraInsumos.resx" />
+    <EmbeddedResource Include="FrmAddInsumo.resx" />
+    <EmbeddedResource Include="FrmAddPedidos.resx" />
+    <EmbeddedResource Include="FrmAlmacenInsumos.resx" />
+    <EmbeddedResource Include="FrmCompraInsumos.resx" />
+    <EmbeddedResource Include="FrmPedidos.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
