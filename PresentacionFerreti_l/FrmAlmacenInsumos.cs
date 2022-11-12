@@ -56,6 +56,11 @@ namespace PresentacionFerreti_l
             }
         }
 
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
             Mai.Mostrar(dtgMostrar,TxtBuscar.Text);

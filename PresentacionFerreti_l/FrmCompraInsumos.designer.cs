@@ -41,17 +41,16 @@
             // 
             // BtnBuscar
             // 
-            //this.BtnBuscar.BackgroundImage = global::PresentacionFerreti.Properties.Resources.buscar;
             this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnBuscar.Location = new System.Drawing.Point(688, 118);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(36, 30);
             this.BtnBuscar.TabIndex = 9;
             this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // BtnAgregar
             // 
-            //this.BtnAgregar.BackgroundImage = global::PresentacionFerreti.Properties.Resources.anadir;
             this.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnAgregar.Location = new System.Drawing.Point(730, 118);
             this.BtnAgregar.Name = "BtnAgregar";
@@ -81,13 +80,13 @@
             // 
             // BtnSalir
             // 
-            //this.BtnSalir.BackgroundImage = global::PresentacionFerreti.Properties.Resources.cerrar;
             this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnSalir.Location = new System.Drawing.Point(718, 31);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(36, 30);
             this.BtnSalir.TabIndex = 5;
             this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // panel1
             // 

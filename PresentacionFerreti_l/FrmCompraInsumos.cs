@@ -37,6 +37,16 @@ namespace PresentacionFerreti_l
             frmAddCompraInsumos.ShowDialog();
         }
 
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            Mci.Mostrar(dtgMostrar, TxtBuscar.Text);
+        }
+
         private void dtgMostrar_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             Ec.Cantidad =int.Parse(dtgMostrar.Rows[Fila].Cells[2].Value.ToString());
