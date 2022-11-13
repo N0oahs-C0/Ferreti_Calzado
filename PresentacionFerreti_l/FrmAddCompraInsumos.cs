@@ -18,8 +18,8 @@ namespace PresentacionFerreti_l
         public FrmAddCompraInsumos()
         {
             InitializeComponent();
-            Mci.ExportarInsumos(CmbInsumo);
             Mci = new ManejadorCompraInsumo();
+            Mci.ExportarInsumo(CmbInsumo); 
             if (FrmCompraInsumos.Ec.Id>0)
             {
                 CmbInsumo.Text = FrmCompraInsumos.FkInsumo;

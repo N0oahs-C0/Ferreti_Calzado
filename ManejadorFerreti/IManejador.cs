@@ -12,6 +12,6 @@ namespace ManejadorFerreti
         void guardar(dynamic Entidad);
         void Borrar(dynamic Entidad);
         void Mostrar(DataGridView tabla, string filtro);
-        void Exportar(DataGridView tabla);
+        void Exportar(ComboBox caja);
     }
 }

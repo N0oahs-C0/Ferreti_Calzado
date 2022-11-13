@@ -33,8 +33,8 @@ namespace PresentacionFerreti_l
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             Ec.Id = -1;
-            FrmAddCompraInsumos frmAddCompraInsumos = new FrmAddCompraInsumos();
-            frmAddCompraInsumos.ShowDialog();
+            FrmAddCompraInsumos frm = new FrmAddCompraInsumos();
+            frm.Show();
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)

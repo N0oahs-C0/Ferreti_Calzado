@@ -10,7 +10,7 @@ using Crud;
 
 namespace ManejadorFerreti
 {
-    public class ManejadorCompraInsumo:IManejador
+    public class ManejadorCompraInsumo : IManejador
     {
         CompraInsumo Ci = new CompraInsumo();
         Grafico g = new Grafico();
@@ -23,11 +23,6 @@ namespace ManejadorFerreti
             {
                 Ci.Borrar(Entidad);
             }
-        }
-
-        public void Exportar(DataGridView tabla)
-        {
-            throw new NotImplementedException();
         }
 
         public void guardar(dynamic Entidad)
@@ -44,11 +39,15 @@ namespace ManejadorFerreti
             tabla.Columns.Insert(5, g.Boton("Borrar", Color.FromArgb(251, 42, 9)));
             tabla.Columns[0].Visible = false;
         }
-        public void ExportarInsumos(ComboBox Caja) {
-            Caja.DataSource = Ai.Mostrar("").Tables["almacen_insumos"];
-            Caja.DisplayMember = "nombre";
-            Caja.ValueMember = "Id";
-        
+        public void ExportarInsumo(ComboBox caja) 
+        {
+            caja.DataSource = Ai.Mostrar("").Tables["almacen_insumos"];
+            caja.DisplayMember = "nombre";
+            caja.ValueMember = "id";
+        }
+        public void Exportar(ComboBox caja)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -9,15 +9,15 @@ using ConectarBd;
 
 namespace Acceso_Ferreti
 {
-    public class AlmacenInsumo : IConexion
+    public class AlmacenInsumo 
     {
         Base b = new Base("localhost","root","","ferreti", 3306);
-        public void Borrar(dynamic Entidad)
+        public void Borrar(EAlmacenInsumo Entidad)
         {
             b.Comando(string.Format("Call DeleteAlmacen_Insumos({0})",Entidad.Id));
         }
 
-        public void Guardar(dynamic Entidad)
+        public void Guardar(EAlmacenInsumo Entidad)
         {
             b.Comando(string.Format("Call InsertAlmacen_Insumos({0},{1},'{2}',{3},{4})", Entidad.Id,Entidad.Nombre,
                 Entidad.Cantidad,Entidad.Costo,Entidad.Cantidadxpar));
@@ -26,6 +26,10 @@ namespace Acceso_Ferreti
         public DataSet Mostrar(string Filtro)
         {
             return b.Obtener(string.Format("Call showAlmacen_Insumos('%{0}%')",Filtro),"almacen_insumos");
+        }
+        public DataSet MostrarTodo()
+        {
+            return b.Obtener(string.Format("Call showAlmacen_Insumos('%%')"), "almacen_insumos");
         }
     }
 }

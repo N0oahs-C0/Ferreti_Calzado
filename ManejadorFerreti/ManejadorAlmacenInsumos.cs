@@ -22,7 +22,7 @@ namespace ManejadorFerreti
             }
         }
 
-        public void Exportar(DataGridView tabla)
+        public void Exportar(ComboBox caja)
         {
             throw new NotImplementedException();
         }
