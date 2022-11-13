@@ -1,7 +1,7 @@
 ﻿
 namespace PresentacionFerreti_l
 {
-    partial class FmrProductoT
+    partial class FmrProductosT
     {
         /// <summary>
         /// Required designer variable.
@@ -50,48 +50,53 @@ namespace PresentacionFerreti_l
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.Text = "X";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(669, 80);
+            this.btnAgregar.Location = new System.Drawing.Point(668, 79);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(46, 34);
-            this.btnAgregar.TabIndex = 8;
+            this.btnAgregar.TabIndex = 20;
             this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(336, 23);
+            this.label1.Location = new System.Drawing.Point(305, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.Size = new System.Drawing.Size(113, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "VENTAS";
+            this.label1.Text = "Productos Terminados";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(617, 80);
+            this.btnBuscar.Location = new System.Drawing.Point(616, 79);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(46, 34);
-            this.btnBuscar.TabIndex = 13;
+            this.btnBuscar.TabIndex = 25;
             this.btnBuscar.Text = "busca";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(72, 88);
+            this.txtBuscar.Location = new System.Drawing.Point(71, 87);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(524, 20);
-            this.txtBuscar.TabIndex = 12;
+            this.txtBuscar.TabIndex = 24;
             // 
             // dgtProductosT
             // 
             this.dgtProductosT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgtProductosT.Location = new System.Drawing.Point(26, 135);
+            this.dgtProductosT.Location = new System.Drawing.Point(25, 135);
             this.dgtProductosT.Name = "dgtProductosT";
             this.dgtProductosT.Size = new System.Drawing.Size(674, 223);
-            this.dgtProductosT.TabIndex = 11;
+            this.dgtProductosT.TabIndex = 23;
+            this.dgtProductosT.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtProductosT_CellClick);
+            this.dgtProductosT.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtProductosT_CellEnter);
             // 
             // panel1
             // 
@@ -100,18 +105,18 @@ namespace PresentacionFerreti_l
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(727, 57);
-            this.panel1.TabIndex = 10;
+            this.panel1.TabIndex = 22;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 88);
+            this.label2.Location = new System.Drawing.Point(22, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 9;
+            this.label2.TabIndex = 21;
             this.label2.Text = "Buscar:";
             // 
-            // FmrProductoT
+            // FmrProductosT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -123,9 +128,9 @@ namespace PresentacionFerreti_l
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FmrProductoT";
+            this.Name = "FmrProductosT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FmrProductoT";
+            this.Text = "FmrProductosT";
             ((System.ComponentModel.ISupportInitialize)(this.dgtProductosT)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

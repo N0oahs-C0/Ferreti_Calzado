@@ -58,17 +58,17 @@
     <Compile Include="FmrProductosAA.Designer.cs">
       <DependentUpon>FmrProductosAA.cs</DependentUpon>
     </Compile>
+    <Compile Include="FmrProductosT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrProductosT.Designer.cs">
+      <DependentUpon>FmrProductosT.cs</DependentUpon>
+    </Compile>
     <Compile Include="FmrProductosTA.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FmrProductosTA.Designer.cs">
       <DependentUpon>FmrProductosTA.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FmrProductoT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FmrProductoT.Designer.cs">
-      <DependentUpon>FmrProductoT.cs</DependentUpon>
     </Compile>
     <Compile Include="FmrVentas.cs">
       <SubType>Form</SubType>
@@ -103,8 +103,14 @@
     <EmbeddedResource Include="FmrProductosA.resx">
       <DependentUpon>FmrProductosA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FmrProductoT.resx">
-      <DependentUpon>FmrProductoT.cs</DependentUpon>
+    <EmbeddedResource Include="FmrProductosAA.resx">
+      <DependentUpon>FmrProductosAA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrProductosT.resx">
+      <DependentUpon>FmrProductosT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrProductosTA.resx">
+      <DependentUpon>FmrProductosTA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FmrVentas.resx">
       <DependentUpon>FmrVentas.cs</DependentUpon>

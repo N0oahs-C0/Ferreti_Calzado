@@ -41,7 +41,7 @@ namespace PresentacionFerreti_l
         private void dgtVentas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ventas.Id = int.Parse(dgtVentas.Rows[fila].Cells[0].Value.ToString());
-            ventas.Fkpedido = int.Parse(dgtVentas.Rows[fila].Cells[0].Value.ToString());
+            ventas.Fkpedido = int.Parse(dgtVentas.Rows[fila].Cells[1].Value.ToString());
             switch (col)
             {
                 case 3:

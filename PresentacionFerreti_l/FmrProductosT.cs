@@ -13,21 +13,20 @@ using Acceso_Ferreti;
 
 namespace PresentacionFerreti_l
 {
-    public partial class FmrProductosA : Form
+    public partial class FmrProductosT : Form
     {
-        MProductosA ma;
-        public static ProductosA entidad = new ProductosA(0, 0, 0);
+        MProductosT mt;
+        public static ProductosT entidad = new ProductosT(0, "", 0);
         int fila = 0, col = 0;
+        public FmrProductosT()
+        {
+            InitializeComponent();
+            mt = new MProductosT();
+        }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        public FmrProductosA()
-        {
-            InitializeComponent();
-            ma = new MProductosA();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -38,28 +37,28 @@ namespace PresentacionFerreti_l
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             entidad.Id = -1;
-            FmrProductosAA fma = new FmrProductosAA();
+            FmrProductosTA fma = new FmrProductosTA();
             fma.ShowDialog();
             Actualizar();
         }
 
-        private void dgtProductosA_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgtProductosT_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            entidad.Id = int.Parse(dgtProductosA.Rows[fila].Cells[0].Value.ToString());
-            entidad.Cantidad = int.Parse(dgtProductosA.Rows[fila].Cells[1].Value.ToString());
-            entidad.Fkpedido = int.Parse(dgtProductosA.Rows[fila].Cells[2].Value.ToString());
+            entidad.Id = int.Parse(dgtProductosT.Rows[fila].Cells[0].Value.ToString());
+            entidad.Productos = dgtProductosT.Rows[fila].Cells[1].Value.ToString();
+            entidad.Cantidad = int.Parse(dgtProductosT.Rows[fila].Cells[2].Value.ToString());
             switch (col)
             {
-                case 4:
+                case 3:
                     {
-                        FmrVentasA fa = new FmrVentasA();
+                        FmrProductosTA fa = new FmrProductosTA();
                         fa.ShowDialog();
                         Actualizar();
                     }
                     break;
-                case 5:
+                case 4:
                     {
-                        ma.Borrar(entidad);
+                        mt.Borrar(entidad);
                         Actualizar();
                     }
                     break;
@@ -68,7 +67,7 @@ namespace PresentacionFerreti_l
             }
         }
 
-        private void dgtProductosA_CellEnter(object sender, DataGridViewCellEventArgs e)
+        private void dgtProductosT_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             fila = e.RowIndex;
             col = e.ColumnIndex;
@@ -76,7 +75,7 @@ namespace PresentacionFerreti_l
 
         void Actualizar()
         {
-            ma.Mostrar(dgtProductosA, txtBuscar.Text);
+            mt.Mostrar(dgtProductosT, txtBuscar.Text);
         }
     }
 }

@@ -38,8 +38,8 @@ namespace ManejadorFerreti
             tabla.Columns.Clear();
             tabla.RowTemplate.Height = 30;
             tabla.DataSource = apt.Mostrar(filtro).Tables["productos_terminados"];
-            tabla.Columns.Insert(4, g.Boton("Editar", Color.Green));
-            tabla.Columns.Insert(5, g.Boton("Borrar", Color.Red));
+            tabla.Columns.Insert(3, g.Boton("Editar", Color.Green));
+            tabla.Columns.Insert(4, g.Boton("Borrar", Color.Red));
             tabla.Columns[0].Visible = false;
         }
     }

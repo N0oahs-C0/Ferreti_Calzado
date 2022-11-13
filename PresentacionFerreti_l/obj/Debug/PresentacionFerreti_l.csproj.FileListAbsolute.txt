@@ -19,3 +19,5 @@ C:\Users\ddr4z\source\repos\PresentacionFerreti_l\PresentacionFerreti_l\bin\Debu
 C:\Users\ddr4z\source\repos\PresentacionFerreti_l\PresentacionFerreti_l\obj\Debug\PresentacionFerreti_l.csproj.CopyComplete
 C:\Users\ddr4z\source\repos\PresentacionFerreti_l\PresentacionFerreti_l\obj\Debug\PresentacionFerreti_l.exe
 C:\Users\ddr4z\source\repos\PresentacionFerreti_l\PresentacionFerreti_l\obj\Debug\PresentacionFerreti_l.pdb
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\PresentacionFerreti_l\obj\Debug\PresentacionFerreti_l.FmrProductosA.resources
+C:\Users\ddr4z\source\repos\PresentacionFerreti_l\PresentacionFerreti_l\obj\Debug\PresentacionFerreti_l.FmrProductosT.resources

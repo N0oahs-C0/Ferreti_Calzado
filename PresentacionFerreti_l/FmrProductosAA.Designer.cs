@@ -29,12 +29,121 @@ namespace PresentacionFerreti_l
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtfkpedido = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtcantidad = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.btnCerrar);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(541, 57);
+            this.panel1.TabIndex = 16;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.IndianRed;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCerrar.Location = new System.Drawing.Point(477, 12);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(51, 35);
+            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.Text = "X";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(172, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "PRODUCTOS TERMINADOS";
+            // 
+            // txtfkpedido
+            // 
+            this.txtfkpedido.Location = new System.Drawing.Point(230, 107);
+            this.txtfkpedido.Name = "txtfkpedido";
+            this.txtfkpedido.Size = new System.Drawing.Size(155, 20);
+            this.txtfkpedido.TabIndex = 21;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(215, 81);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Clave del pedido";
+            // 
+            // txtcantidad
+            // 
+            this.txtcantidad.Location = new System.Drawing.Point(23, 107);
+            this.txtcantidad.Name = "txtcantidad";
+            this.txtcantidad.Size = new System.Drawing.Size(155, 20);
+            this.txtcantidad.TabIndex = 19;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardar.Location = new System.Drawing.Point(449, 161);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 18;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Cantidad del encargo";
+            // 
+            // FmrProductosAA
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(540, 199);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txtfkpedido);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtcantidad);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FmrProductosAA";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FmrProductosAA";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtfkpedido;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtcantidad;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label label2;
     }
 }
