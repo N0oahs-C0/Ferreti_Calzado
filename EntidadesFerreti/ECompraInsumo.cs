@@ -8,14 +8,16 @@ namespace EntidadesFerreti
 {
     public class ECompraInsumo
     {
-        public ECompraInsumo(int id, int fkinsumo, int cantidad)
+        public ECompraInsumo(int id, int fkPedido, int fkinsumo, int cantidad)
         {
             Id = id;
             Fkinsumo = fkinsumo;
             Cantidad = cantidad;
+            FkPedido = fkPedido;
         }
 
         public int Id { get; set; }
+        public int FkPedido { get; set; }
         public int Fkinsumo { get; set; }
         public int Cantidad { get; set; }
     }

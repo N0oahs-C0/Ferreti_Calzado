@@ -15,12 +15,13 @@ namespace Acceso_Ferreti
 
         public void Borrar(ECompraInsumo Entidad)
         {
-            b.Comando(string.Format("Call Delete p_deletecomprainsumos({0})",Entidad.Id));
+            b.Comando(string.Format("Call p_deletecomprainsumos({0})",Entidad.Id));
         }
 
         public void Guardar(ECompraInsumo Entidad)
         {
-            b.Comando(string.Format("Call Delete P_InsertCompraInsumos({0},{1},{2})", Entidad.Id, Entidad.Fkinsumo, Entidad.Cantidad));
+            b.Comando(string.Format("Call P_InsertCompraInsumos({0}, {1}, {2}, {3})", 
+                Entidad.Id, Entidad.FkPedido, Entidad.Fkinsumo, Entidad.Cantidad));
         }
 
         public DataSet Mostrar(string Filtro)

@@ -19,11 +19,11 @@ namespace PresentacionFerreti_l
         {
             InitializeComponent();
             Mp = new ManejadorPedidos();
+
             if (FrmPedidos.p.Id > 0)
             {
                 TxtCantidad.Text = FrmPedidos.p.Cantidad.ToString();
                 TxtCliente.Text = FrmPedidos.p.Cliente.ToString();
-
             }
         }
 
@@ -39,6 +39,14 @@ namespace PresentacionFerreti_l
             p.Cliente = TxtCliente.Text;
             p.Id = FrmPedidos.p.Id;
             Mp.guardar(p);
+            
+            Mp.Mensaje(cmbVerificar, p.Id);
+
+            if (cmbVerificar.Items.Count >= 1)
+                MessageBox.Show("Hay suficiente producto en el almacen :)");
+            else
+                MessageBox.Show("Falta producto, se mandaron a comprar los insumos necesarios");
+
             Close();
         }
     }

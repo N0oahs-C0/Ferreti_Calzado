@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnSalir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtCantidad = new System.Windows.Forms.TextBox();
             this.TxtCliente = new System.Windows.Forms.TextBox();
             this.BtnGuardar = new System.Windows.Forms.Button();
-            this.BtnSalir = new System.Windows.Forms.Button();
+            this.cmbVerificar = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +49,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(471, 95);
             this.panel1.TabIndex = 19;
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnSalir.Location = new System.Drawing.Point(415, 31);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(36, 30);
+            this.BtnSalir.TabIndex = 5;
+            this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // label1
             // 
@@ -101,22 +112,20 @@
             this.BtnGuardar.UseVisualStyleBackColor = true;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
-            // BtnSalir
+            // cmbVerificar
             // 
-            //this.BtnSalir.BackgroundImage = global::PresentacionFerreti.Properties.Resources.cerrar;
-            this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnSalir.Location = new System.Drawing.Point(415, 31);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(36, 30);
-            this.BtnSalir.TabIndex = 5;
-            this.BtnSalir.UseVisualStyleBackColor = true;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            this.cmbVerificar.FormattingEnabled = true;
+            this.cmbVerificar.Location = new System.Drawing.Point(340, 221);
+            this.cmbVerificar.Name = "cmbVerificar";
+            this.cmbVerificar.Size = new System.Drawing.Size(121, 33);
+            this.cmbVerificar.TabIndex = 25;
             // 
             // FrmAddPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 296);
+            this.Controls.Add(this.cmbVerificar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -125,7 +134,7 @@
             this.Controls.Add(this.BtnGuardar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmAddPedidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAddPedidos";
@@ -146,5 +155,6 @@
         private System.Windows.Forms.TextBox TxtCantidad;
         private System.Windows.Forms.TextBox TxtCliente;
         private System.Windows.Forms.Button BtnGuardar;
+        private System.Windows.Forms.ComboBox cmbVerificar;
     }
 }

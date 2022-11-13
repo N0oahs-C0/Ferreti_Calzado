@@ -13,9 +13,10 @@ namespace PresentacionFerreti_l
 {
     public partial class FrmCompraInsumos : Form
     {
-        public static ECompraInsumo Ec = new ECompraInsumo(0,0,0);
+        public static ECompraInsumo Ec = new ECompraInsumo(0, 0, 0, 0);
         int Fila = 0, Columna = 0;
-        public static string FkInsumo;
+        public static string FkInsumo, fkPedido;
+
         ManejadorCompraInsumo Mci;
         public FrmCompraInsumos()
         {
@@ -49,14 +50,15 @@ namespace PresentacionFerreti_l
 
         private void dtgMostrar_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            Ec.Cantidad =int.Parse(dtgMostrar.Rows[Fila].Cells[2].Value.ToString());
-            FkInsumo = dtgMostrar.Rows[Fila].Cells[1].Value.ToString();
+            fkPedido = dtgMostrar.Rows[Fila].Cells[1].Value.ToString();
+            FkInsumo = dtgMostrar.Rows[Fila].Cells[2].Value.ToString();
+            Ec.Cantidad = int.Parse(dtgMostrar.Rows[Fila].Cells[3].Value.ToString());
             switch (Columna)
             {
-                case 4: { FrmAddCompraInsumos frmAddCompraInsumos = new FrmAddCompraInsumos();
+                case 5: { FrmAddCompraInsumos frmAddCompraInsumos = new FrmAddCompraInsumos();
                         frmAddCompraInsumos.ShowDialog();
                     } break;
-                case 5:{ Mci.Borrar(Ec.Id); } break;
+                case 6:{ Mci.Borrar(Ec.Id); } break;
                 default:
                     break;
             }

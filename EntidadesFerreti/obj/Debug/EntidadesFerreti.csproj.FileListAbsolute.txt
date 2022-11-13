@@ -10,3 +10,9 @@ C:\Users\musul\OneDrive\Escritorio\ferreti\clonarRepositorioAqui\Ferreti_Calzado
 C:\Users\musul\OneDrive\Escritorio\ferreti\clonarRepositorioAqui\Ferreti_Calzado\EntidadesFerreti\obj\Debug\EntidadesFerreti.csproj.CoreCompileInputs.cache
 C:\Users\musul\OneDrive\Escritorio\ferreti\clonarRepositorioAqui\Ferreti_Calzado\EntidadesFerreti\obj\Debug\EntidadesFerreti.dll
 C:\Users\musul\OneDrive\Escritorio\ferreti\clonarRepositorioAqui\Ferreti_Calzado\EntidadesFerreti\obj\Debug\EntidadesFerreti.pdb
+C:\Users\musul\OneDrive\Escritorio\ferreti\Ferreti_Calzado\EntidadesFerreti\bin\Debug\EntidadesFerreti.dll
+C:\Users\musul\OneDrive\Escritorio\ferreti\Ferreti_Calzado\EntidadesFerreti\bin\Debug\EntidadesFerreti.pdb
+C:\Users\musul\OneDrive\Escritorio\ferreti\Ferreti_Calzado\EntidadesFerreti\obj\Debug\EntidadesFerreti.csproj.AssemblyReference.cache
+C:\Users\musul\OneDrive\Escritorio\ferreti\Ferreti_Calzado\EntidadesFerreti\obj\Debug\EntidadesFerreti.csproj.CoreCompileInputs.cache
+C:\Users\musul\OneDrive\Escritorio\ferreti\Ferreti_Calzado\EntidadesFerreti\obj\Debug\EntidadesFerreti.dll
+C:\Users\musul\OneDrive\Escritorio\ferreti\Ferreti_Calzado\EntidadesFerreti\obj\Debug\EntidadesFerreti.pdb

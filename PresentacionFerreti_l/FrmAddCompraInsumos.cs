@@ -29,7 +29,7 @@ namespace PresentacionFerreti_l
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            ECompraInsumo Ec = new ECompraInsumo(0,0,0);
+            ECompraInsumo Ec = new ECompraInsumo(0, 0, 0, 0);
             Ec.Id = FrmCompraInsumos.Ec.Id;
             Ec.Cantidad = int.Parse(txtCantidad.Text);
             Ec.Fkinsumo =Convert.ToInt32(CmbInsumo.SelectedValue);

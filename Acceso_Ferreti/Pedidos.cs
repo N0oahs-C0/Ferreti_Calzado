@@ -20,7 +20,7 @@ namespace Acceso_Ferreti
 
         public void Guardar(Peddidos Entidad)
         {
-            b.Comando(string.Format("Call InsertPedido({0})", Entidad.Id, Entidad.Cliente, Entidad.Cantidad));
+            b.Comando(string.Format("Call InsertPedido({0}, '{1}', {2})", Entidad.Id, Entidad.Cliente, Entidad.Cantidad));
         }
 
         public DataSet Mostrar(string Filtro)
