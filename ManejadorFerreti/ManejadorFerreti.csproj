@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IManejador.cs" />
+    <Compile Include="ManejadorAlmacenInsumos.cs" />
+    <Compile Include="ManejadorCompraInsumo.cs" />
+    <Compile Include="ManejadorPedidos.cs" />
     <Compile Include="MProductosA.cs" />
     <Compile Include="MProductosT.cs" />
     <Compile Include="MVentas.cs" />

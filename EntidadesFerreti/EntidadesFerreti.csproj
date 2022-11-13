@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EAlmacenInsumo.cs" />
+    <Compile Include="ECompraInsumo.cs" />
+    <Compile Include="Peddidos.cs" />
     <Compile Include="ProductosA.cs" />
     <Compile Include="ProductosT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
