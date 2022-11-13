@@ -16,7 +16,7 @@ namespace PresentacionFerreti_l
     {
         int Fila = 0, columna = 0;
         ManejadorPedidos Mp;
-     public static Peddidos p = new Peddidos(0,"",0);
+        public static Peddidos p = new Peddidos(0,"",0);
         public FrmPedidos()
         {
             InitializeComponent();

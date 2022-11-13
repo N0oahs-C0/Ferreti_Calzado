@@ -24,3 +24,15 @@ C:\Users\musul\OneDrive\Escritorio\ferreti\clonarRepositorioAqui\Ferreti_Calzado
 C:\Users\musul\OneDrive\Escritorio\ferreti\clonarRepositorioAqui\Ferreti_Calzado\Acceso_Ferreti\obj\Debug\Acceso_Ferreti.csproj.CopyComplete
 C:\Users\musul\OneDrive\Escritorio\ferreti\clonarRepositorioAqui\Ferreti_Calzado\Acceso_Ferreti\obj\Debug\Acceso_Ferreti.dll
 C:\Users\musul\OneDrive\Escritorio\ferreti\clonarRepositorioAqui\Ferreti_Calzado\Acceso_Ferreti\obj\Debug\Acceso_Ferreti.pdb
+C:\Users\musul\OneDrive\Escritorio\ferreti\PresentacionFerreti_l\Acceso_Ferreti\bin\Debug\Acceso_Ferreti.dll
+C:\Users\musul\OneDrive\Escritorio\ferreti\PresentacionFerreti_l\Acceso_Ferreti\bin\Debug\Acceso_Ferreti.pdb
+C:\Users\musul\OneDrive\Escritorio\ferreti\PresentacionFerreti_l\Acceso_Ferreti\bin\Debug\EntidadesFerreti.dll
+C:\Users\musul\OneDrive\Escritorio\ferreti\PresentacionFerreti_l\Acceso_Ferreti\bin\Debug\MySql.Data.dll
+C:\Users\musul\OneDrive\Escritorio\ferreti\PresentacionFerreti_l\Acceso_Ferreti\bin\Debug\EntidadesFerreti.pdb
+C:\Users\musul\OneDrive\Escritorio\ferreti\PresentacionFerreti_l\Acceso_Ferreti\bin\Debug\ConectarBd.pdb
+C:\Users\musul\OneDrive\Escritorio\ferreti\PresentacionFerreti_l\Acceso_Ferreti\bin\Debug\Crud.pdb
+C:\Users\musul\OneDrive\Escritorio\ferreti\PresentacionFerreti_l\Acceso_Ferreti\obj\Debug\Acceso_Ferreti.csproj.AssemblyReference.cache
+C:\Users\musul\OneDrive\Escritorio\ferreti\PresentacionFerreti_l\Acceso_Ferreti\obj\Debug\Acceso_Ferreti.csproj.CoreCompileInputs.cache
+C:\Users\musul\OneDrive\Escritorio\ferreti\PresentacionFerreti_l\Acceso_Ferreti\obj\Debug\Acceso_Ferreti.csproj.CopyComplete
+C:\Users\musul\OneDrive\Escritorio\ferreti\PresentacionFerreti_l\Acceso_Ferreti\obj\Debug\Acceso_Ferreti.dll
+C:\Users\musul\OneDrive\Escritorio\ferreti\PresentacionFerreti_l\Acceso_Ferreti\obj\Debug\Acceso_Ferreti.pdb
