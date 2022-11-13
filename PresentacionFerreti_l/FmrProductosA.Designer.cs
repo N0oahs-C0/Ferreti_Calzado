@@ -34,10 +34,10 @@ namespace PresentacionFerreti_l
             this.label1 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.dgtProductosT = new System.Windows.Forms.DataGridView();
+            this.dgtProductosA = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgtProductosT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgtProductosA)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +50,7 @@ namespace PresentacionFerreti_l
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.Text = "X";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnAgregar
             // 
@@ -59,15 +60,16 @@ namespace PresentacionFerreti_l
             this.btnAgregar.TabIndex = 14;
             this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(336, 23);
+            this.label1.Location = new System.Drawing.Point(312, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.Size = new System.Drawing.Size(106, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "VENTAS";
+            this.label1.Text = "Productos Apartados";
             // 
             // btnBuscar
             // 
@@ -77,6 +79,7 @@ namespace PresentacionFerreti_l
             this.btnBuscar.TabIndex = 19;
             this.btnBuscar.Text = "busca";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
@@ -85,13 +88,15 @@ namespace PresentacionFerreti_l
             this.txtBuscar.Size = new System.Drawing.Size(524, 20);
             this.txtBuscar.TabIndex = 18;
             // 
-            // dgtProductosT
+            // dgtProductosA
             // 
-            this.dgtProductosT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgtProductosT.Location = new System.Drawing.Point(26, 130);
-            this.dgtProductosT.Name = "dgtProductosT";
-            this.dgtProductosT.Size = new System.Drawing.Size(674, 223);
-            this.dgtProductosT.TabIndex = 17;
+            this.dgtProductosA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgtProductosA.Location = new System.Drawing.Point(26, 130);
+            this.dgtProductosA.Name = "dgtProductosA";
+            this.dgtProductosA.Size = new System.Drawing.Size(674, 223);
+            this.dgtProductosA.TabIndex = 17;
+            this.dgtProductosA.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtProductosA_CellClick);
+            this.dgtProductosA.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtProductosA_CellEnter);
             // 
             // panel1
             // 
@@ -119,14 +124,14 @@ namespace PresentacionFerreti_l
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.dgtProductosT);
+            this.Controls.Add(this.dgtProductosA);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FmrProductosA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FmrProductosA";
-            ((System.ComponentModel.ISupportInitialize)(this.dgtProductosT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgtProductosA)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -141,7 +146,7 @@ namespace PresentacionFerreti_l
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.DataGridView dgtProductosT;
+        private System.Windows.Forms.DataGridView dgtProductosA;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
     }

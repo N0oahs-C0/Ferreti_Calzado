@@ -12,16 +12,18 @@ using EntidadesFerreti;
 
 namespace PresentacionFerreti_l
 {
-    public partial class FmrVentasA : Form
+    public partial class fmrVentasAA : Form
     {
-        MVentas mve;
-        public FmrVentasA()
+        MVentas mv;
+        public fmrVentasAA()
         {
             InitializeComponent();
-            mve = new MVentas();
-            if (FmrVentas.ventas.Id>0)
+            mv = new MVentas();
+            //mv.ExtraerPedido(cmbfkpedido);
+            if (FmrVentaas.ventas.Id > 0)
             {
-                txtfkpedido.Text = FmrVentas.ventas.Fkpedido.ToString();
+                txtfkpedido.Text = FmrVentaas.ventas.Fkpedido.ToString();
+                //cmbfkpedido.Text = FmrVentaas.Fkpedido.ToString();
             }
         }
 
@@ -32,7 +34,8 @@ namespace PresentacionFerreti_l
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            mve.Guardar(new Ventas(FmrVentas.ventas.Id, int.Parse(txtfkpedido.Text)));
+            mv.Guardar(new Ventas(FmrVentaas.ventas.Id, int.Parse(txtfkpedido.Text)));
+            Close();
         }
     }
 }

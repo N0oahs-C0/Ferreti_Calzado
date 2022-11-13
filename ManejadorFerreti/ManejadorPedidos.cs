@@ -39,7 +39,7 @@ namespace ManejadorFerreti
             tabla.Rows.Clear();
             tabla.RowTemplate.Height = 30;
             tabla.DataSource = p.Mostrar(filtro).Tables["pedidos"];
-            tabla.Columns.Insert(4,g.Boton("Editar",Color.FromArgb(137, 249, 59)));
+            tabla.Columns.Insert(4, g.Boton("Editar",Color.FromArgb(137, 249, 59)));
             tabla.Columns.Insert(5, g.Boton("Borrar", Color.FromArgb(251, 42, 9)));
             tabla.Columns[0].Visible = false;
         }

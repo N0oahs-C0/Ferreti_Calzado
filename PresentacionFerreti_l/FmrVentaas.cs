@@ -11,29 +11,29 @@ using EntidadesFerreti;
 using ManejadorFerreti;
 using Acceso_Ferreti;
 
-
 namespace PresentacionFerreti_l
 {
-    public partial class FmrVentas : Form
+    public partial class FmrVentaas : Form
     {
         MVentas mv;
         public static Ventas ventas = new Ventas(0, 0);
+        //public static int Fkpedido;
         int fila = 0, col = 0;
-        public FmrVentas()
+        public FmrVentaas()
         {
             InitializeComponent();
             mv = new MVentas();
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-            Close();
+            Actualizar();
         }
 
-        private void btnAgregar_Click_1(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
             ventas.Id = -1;
-            FmrVentasA fma = new FmrVentasA();
+            fmrVentasAA fma = new fmrVentasAA();
             fma.ShowDialog();
             Actualizar();
         }
@@ -41,20 +41,22 @@ namespace PresentacionFerreti_l
         private void dgtVentas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ventas.Id = int.Parse(dgtVentas.Rows[fila].Cells[0].Value.ToString());
-            ventas.Fkpedido = int.Parse(dgtVentas.Rows[fila].Cells[0].Value.ToString());
+            ventas.Fkpedido = int.Parse(dgtVentas.Rows[fila].Cells[1].Value.ToString());
             switch (col)
             {
                 case 3:
                     {
-                        FmrVentasA fa = new FmrVentasA();
+                         fmrVentasAA fa = new fmrVentasAA();
                         fa.ShowDialog();
                         Actualizar();
-                    } break;
+                    }
+                    break;
                 case 4:
                     {
                         mv.Borrar(ventas);
                         Actualizar();
-                    } break;
+                    }
+                    break;
                 default:
                     break;
             }
@@ -66,14 +68,9 @@ namespace PresentacionFerreti_l
             col = e.ColumnIndex;
         }
 
-        private void btnbuscar_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Actualizar();
-        }
-
-        private void btnBuscar_Click_1(object sender, EventArgs e)
-        {
-            Actualizar();
+            Close();
         }
 
         void Actualizar()

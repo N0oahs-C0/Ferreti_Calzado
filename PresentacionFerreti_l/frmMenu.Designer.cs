@@ -85,6 +85,7 @@ namespace PresentacionFerreti_l
             this.btnProductosTerminados.TabIndex = 4;
             this.btnProductosTerminados.Text = "Productos terminados";
             this.btnProductosTerminados.UseVisualStyleBackColor = true;
+            this.btnProductosTerminados.Click += new System.EventHandler(this.btnProductosTerminados_Click);
             // 
             // btnProductosApartados
             // 
@@ -94,6 +95,7 @@ namespace PresentacionFerreti_l
             this.btnProductosApartados.TabIndex = 5;
             this.btnProductosApartados.Text = "Produtos apartados";
             this.btnProductosApartados.UseVisualStyleBackColor = true;
+            this.btnProductosApartados.Click += new System.EventHandler(this.btnProductosApartados_Click);
             // 
             // frmMenu
             // 

@@ -13,6 +13,7 @@ namespace ManejadorFerreti
 {
     public class MVentas
     {
+        Pedidos pe = new Pedidos();
         Aventas av = new Aventas();
         Grafico g = new Grafico();
         public void Borrar(Ventas Entidad)
@@ -42,11 +43,11 @@ namespace ManejadorFerreti
             tabla.Columns.Insert(4, g.Boton("Borrar", Color.Red));
             tabla.Columns[0].Visible = false;
         }
-                /*public void ExtraerPedido(ComboBox caja)
+        public void ExtraerPedido(ComboBox caja)
         {
-            caja.DataSource = ap.Mostrar("").Tables["Pedidos"];
+            caja.DataSource = pe.Mostrar("").Tables["Pedidos"];
             caja.DisplayMember = "Cliente";
             caja.ValueMember = "id";
-        }*/
+        }
     }
 }

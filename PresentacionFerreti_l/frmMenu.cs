@@ -25,7 +25,8 @@ namespace PresentacionFerreti_l
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            
+            FmrVentaas fa = new FmrVentaas();
+            fa.ShowDialog();
         }
 
         private void btnAlmacenInsumos_Click(object sender, EventArgs e)
@@ -38,6 +39,18 @@ namespace PresentacionFerreti_l
         {
             FrmCompraInsumos frm = new FrmCompraInsumos();
             frm.ShowDialog();
+        }
+
+        private void btnProductosTerminados_Click(object sender, EventArgs e)
+        {
+            FmrProductoT ft = new FmrProductoT();
+            ft.ShowDialog();
+        }
+
+        private void btnProductosApartados_Click(object sender, EventArgs e)
+        {
+            FmrProductosA fa = new FmrProductosA();
+            fa.ShowDialog();
         }
     }
 }

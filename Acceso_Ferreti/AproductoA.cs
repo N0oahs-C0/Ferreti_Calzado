@@ -25,7 +25,7 @@ namespace Acceso_Ferreti
         public DataSet Mostrar(string filtro)
         {
             return b.Obtener
-                (string.Format("call p_showproductoapartado()",
+                (string.Format("call p_showproductoapartado('%{0}%')",
                 filtro), "productos_apartados");
         }
     }

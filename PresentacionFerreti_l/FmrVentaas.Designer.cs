@@ -1,7 +1,7 @@
 ﻿
 namespace PresentacionFerreti_l
 {
-    partial class FmrVentas
+    partial class FmrVentaas
     {
         /// <summary>
         /// Required designer variable.
@@ -32,13 +32,13 @@ namespace PresentacionFerreti_l
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dgtVentas = new System.Windows.Forms.DataGridView();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.dgtVentas = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgtVentas)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -54,31 +54,49 @@ namespace PresentacionFerreti_l
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(669, 73);
+            this.btnAgregar.Location = new System.Drawing.Point(669, 77);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(46, 34);
-            this.btnAgregar.TabIndex = 1;
-            this.btnAgregar.Text = "mas";
+            this.btnAgregar.TabIndex = 20;
+            this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(336, 23);
+            this.label1.Location = new System.Drawing.Point(312, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "VENTAS";
             // 
-            // label2
+            // btnBuscar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Buscar:";
+            this.btnBuscar.Location = new System.Drawing.Point(617, 77);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(46, 34);
+            this.btnBuscar.TabIndex = 25;
+            this.btnBuscar.Text = "busca";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(72, 85);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(524, 20);
+            this.txtBuscar.TabIndex = 24;
+            // 
+            // dgtVentas
+            // 
+            this.dgtVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgtVentas.Location = new System.Drawing.Point(26, 128);
+            this.dgtVentas.Name = "dgtVentas";
+            this.dgtVentas.Size = new System.Drawing.Size(674, 223);
+            this.dgtVentas.TabIndex = 23;
+            this.dgtVentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtVentas_CellClick);
+            this.dgtVentas.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtVentas_CellEnter);
             // 
             // panel1
             // 
@@ -87,53 +105,35 @@ namespace PresentacionFerreti_l
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(727, 57);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 22;
             // 
-            // dgtVentas
+            // label2
             // 
-            this.dgtVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgtVentas.Location = new System.Drawing.Point(26, 133);
-            this.dgtVentas.Name = "dgtVentas";
-            this.dgtVentas.Size = new System.Drawing.Size(674, 223);
-            this.dgtVentas.TabIndex = 5;
-            this.dgtVentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtVentas_CellClick);
-            this.dgtVentas.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtVentas_CellEnter);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Buscar:";
             // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(72, 81);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(524, 20);
-            this.txtBuscar.TabIndex = 6;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(617, 73);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(46, 34);
-            this.btnBuscar.TabIndex = 7;
-            this.btnBuscar.Text = "+";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
-            // 
-            // FmrVentas
+            // FmrVentaas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(727, 382);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dgtVentas);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnAgregar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FmrVentas";
+            this.Name = "FmrVentaas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FmrVentas";
+            this.Text = "FmrVentaas";
+            ((System.ComponentModel.ISupportInitialize)(this.dgtVentas)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgtVentas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,10 +144,10 @@ namespace PresentacionFerreti_l
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgtVentas;
-        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.DataGridView dgtVentas;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
     }
 }

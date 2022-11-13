@@ -50,6 +50,7 @@ namespace PresentacionFerreti_l
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.Text = "X";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnAgregar
             // 
@@ -59,15 +60,16 @@ namespace PresentacionFerreti_l
             this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(336, 23);
+            this.label1.Location = new System.Drawing.Point(304, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.Size = new System.Drawing.Size(136, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "VENTAS";
+            this.label1.Text = "PRODUCTO TERMINADO";
             // 
             // btnBuscar
             // 
@@ -77,6 +79,7 @@ namespace PresentacionFerreti_l
             this.btnBuscar.TabIndex = 13;
             this.btnBuscar.Text = "busca";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
@@ -92,6 +95,8 @@ namespace PresentacionFerreti_l
             this.dgtProductosT.Name = "dgtProductosT";
             this.dgtProductosT.Size = new System.Drawing.Size(674, 223);
             this.dgtProductosT.TabIndex = 11;
+            this.dgtProductosT.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtProductosT_CellClick);
+            this.dgtProductosT.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtProductosT_CellEnter);
             // 
             // panel1
             // 

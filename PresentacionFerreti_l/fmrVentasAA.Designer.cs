@@ -1,7 +1,7 @@
 ﻿
 namespace PresentacionFerreti_l
 {
-    partial class FmrVentasA
+    partial class fmrVentasAA
     {
         /// <summary>
         /// Required designer variable.
@@ -32,9 +32,10 @@ namespace PresentacionFerreti_l
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.txtfkpedido = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbfkpedido = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,13 +47,13 @@ namespace PresentacionFerreti_l
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(392, 57);
-            this.panel1.TabIndex = 5;
+            this.panel1.TabIndex = 10;
             // 
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.IndianRed;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCerrar.Location = new System.Drawing.Point(265, 12);
+            this.btnCerrar.Location = new System.Drawing.Point(318, 12);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(51, 35);
             this.btnCerrar.TabIndex = 0;
@@ -63,52 +64,63 @@ namespace PresentacionFerreti_l
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(125, 23);
+            this.label1.Location = new System.Drawing.Point(131, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "VENTAS";
             // 
-            // label2
+            // txtfkpedido
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Clave del pedido";
+            this.txtfkpedido.Location = new System.Drawing.Point(16, 103);
+            this.txtfkpedido.Name = "txtfkpedido";
+            this.txtfkpedido.Size = new System.Drawing.Size(188, 20);
+            this.txtfkpedido.TabIndex = 13;
             // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardar.Location = new System.Drawing.Point(247, 146);
+            this.btnGuardar.Location = new System.Drawing.Point(294, 135);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 8;
+            this.btnGuardar.TabIndex = 12;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // txtfkpedido
+            // label2
             // 
-            this.txtfkpedido.Location = new System.Drawing.Point(15, 101);
-            this.txtfkpedido.Name = "txtfkpedido";
-            this.txtfkpedido.Size = new System.Drawing.Size(188, 20);
-            this.txtfkpedido.TabIndex = 9;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Clave del pedido";
             // 
-            // FmrVentasA
+            // cmbfkpedido
+            // 
+            this.cmbfkpedido.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbfkpedido.FormattingEnabled = true;
+            this.cmbfkpedido.Location = new System.Drawing.Point(13, 130);
+            this.cmbfkpedido.Name = "cmbfkpedido";
+            this.cmbfkpedido.Size = new System.Drawing.Size(191, 21);
+            this.cmbfkpedido.TabIndex = 14;
+            // 
+            // fmrVentasAA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 181);
+            this.ClientSize = new System.Drawing.Size(381, 181);
+            this.Controls.Add(this.cmbfkpedido);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtfkpedido);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FmrVentasA";
-            this.Text = "FmrVentasA";
+            this.Name = "fmrVentasAA";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "fmrVentasAA";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -121,8 +133,9 @@ namespace PresentacionFerreti_l
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtfkpedido;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbfkpedido;
     }
 }
