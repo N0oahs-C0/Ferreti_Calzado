@@ -53,6 +53,7 @@ namespace PresentacionFerreti_l
                 case 4:
                     {
                         mv.Borrar(ventas);
+                        Actualizar();
                     } break;
                 default:
                     break;

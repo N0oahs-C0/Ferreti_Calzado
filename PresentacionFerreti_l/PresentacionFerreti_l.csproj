@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FmrProductosA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrProductosA.Designer.cs">
+      <DependentUpon>FmrProductosA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmrProductosAA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrProductosAA.Designer.cs">
+      <DependentUpon>FmrProductosAA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmrProductosTA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrProductosTA.Designer.cs">
+      <DependentUpon>FmrProductosTA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmrProductoT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrProductoT.Designer.cs">
+      <DependentUpon>FmrProductoT.cs</DependentUpon>
+    </Compile>
     <Compile Include="FmrVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +100,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FmrProductosA.resx">
+      <DependentUpon>FmrProductosA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrProductoT.resx">
+      <DependentUpon>FmrProductoT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FmrVentas.resx">
       <DependentUpon>FmrVentas.cs</DependentUpon>
     </EmbeddedResource>
