@@ -28,11 +28,5 @@ namespace Acceso_Ferreti
                 (string.Format("call p_showproductoapartado('%{0}%')",
                 filtro), "productos_apartados");
         }
-
-        public DataSet Mensaje(int filtro)
-        {
-            return b.Obtener(string.Format("SELECT * FROM productos_apartados WHERE fkpedido = {0}", filtro),
-                "productos_apartados");
-        }
     }
 }

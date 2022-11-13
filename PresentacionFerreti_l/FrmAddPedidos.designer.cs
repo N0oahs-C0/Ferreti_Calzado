@@ -37,12 +37,17 @@
             this.TxtCliente = new System.Windows.Forms.TextBox();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.cmbVerificar = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.cmbVerificar);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.BtnSalir);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -114,18 +119,35 @@
             // 
             // cmbVerificar
             // 
+            this.cmbVerificar.Enabled = false;
             this.cmbVerificar.FormattingEnabled = true;
-            this.cmbVerificar.Location = new System.Drawing.Point(340, 221);
+            this.cmbVerificar.Location = new System.Drawing.Point(246, 62);
             this.cmbVerificar.Name = "cmbVerificar";
-            this.cmbVerificar.Size = new System.Drawing.Size(121, 33);
+            this.cmbVerificar.Size = new System.Drawing.Size(90, 33);
             this.cmbVerificar.TabIndex = 25;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(28, 70);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(208, 25);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Cantidad disponible:";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.panel2.Location = new System.Drawing.Point(318, 58);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(31, 37);
+            this.panel2.TabIndex = 26;
             // 
             // FrmAddPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 296);
-            this.Controls.Add(this.cmbVerificar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -138,6 +160,7 @@
             this.Name = "FrmAddPedidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAddPedidos";
+            this.Load += new System.EventHandler(this.FrmAddPedidos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -156,5 +179,7 @@
         private System.Windows.Forms.TextBox TxtCliente;
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.ComboBox cmbVerificar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel2;
     }
 }

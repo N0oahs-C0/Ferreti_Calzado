@@ -110,6 +110,7 @@ namespace PresentacionFerreti_l
             this.Controls.Add(this.btnPedidos);
             this.Name = "frmMenu";
             this.Text = "frmMenu";
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.ResumeLayout(false);
 
         }

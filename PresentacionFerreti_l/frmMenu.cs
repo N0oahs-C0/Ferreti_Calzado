@@ -52,5 +52,10 @@ namespace PresentacionFerreti_l
             FmrProductosA fa = new FmrProductosA();
             fa.ShowDialog();
         }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

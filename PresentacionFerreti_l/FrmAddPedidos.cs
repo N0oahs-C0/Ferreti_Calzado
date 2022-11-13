@@ -15,11 +15,12 @@ namespace PresentacionFerreti_l
     public partial class FrmAddPedidos : Form
     {
         ManejadorPedidos Mp;
+        int cantidad = 1;
         public FrmAddPedidos()
         {
             InitializeComponent();
             Mp = new ManejadorPedidos();
-
+            Mp.ExptraerCantidad(cmbVerificar);
             if (FrmPedidos.p.Id > 0)
             {
                 TxtCantidad.Text = FrmPedidos.p.Cantidad.ToString();
@@ -39,15 +40,19 @@ namespace PresentacionFerreti_l
             p.Cliente = TxtCliente.Text;
             p.Id = FrmPedidos.p.Id;
             Mp.guardar(p);
-            
-            Mp.Mensaje(cmbVerificar, p.Id);
 
-            if (cmbVerificar.Items.Count >= 1)
+            cantidad = int.Parse(cmbVerificar.Text);
+
+            if (cantidad >= p.Cantidad)
                 MessageBox.Show("Hay suficiente producto en el almacen :)");
             else
                 MessageBox.Show("Falta producto, se mandaron a comprar los insumos necesarios");
 
             Close();
+        }
+
+        private void FrmAddPedidos_Load(object sender, EventArgs e)
+        {
         }
     }
 }

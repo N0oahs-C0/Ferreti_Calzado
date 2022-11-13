@@ -72,7 +72,12 @@ namespace PresentacionFerreti_l
             fila = e.RowIndex;
             col = e.ColumnIndex;
         }
-        void Actualizar()
+
+        private void FmrProductoT_Load(object sender, EventArgs e)
+        {
+        }
+
+        public void Actualizar()
         {
             mt.Mostrar(dgtProductosT, txtBuscar.Text);
         }

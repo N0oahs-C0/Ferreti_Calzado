@@ -131,6 +131,7 @@ namespace PresentacionFerreti_l
             this.Name = "FmrProductoT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FmrProductoT";
+            this.Load += new System.EventHandler(this.FmrProductoT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgtProductosT)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

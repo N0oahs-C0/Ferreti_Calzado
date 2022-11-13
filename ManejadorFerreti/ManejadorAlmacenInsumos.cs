@@ -34,7 +34,7 @@ namespace ManejadorFerreti
 
         public void Mostrar(DataGridView tabla, string filtro)
         {
-            tabla.Rows.Clear();
+            tabla.Rows.Clear(); //error
             tabla.RowTemplate.Height = 30;
             tabla.DataSource = A.Mostrar(filtro).Tables["almacen_insumos"];
             tabla.Columns.Insert(5, g.Boton("Editar", Color.FromArgb(137, 249, 59)));
