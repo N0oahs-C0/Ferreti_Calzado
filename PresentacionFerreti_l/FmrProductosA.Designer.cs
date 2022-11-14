@@ -29,38 +29,17 @@ namespace PresentacionFerreti_l
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dgtProductosA = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgtProductosA)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCerrar.Location = new System.Drawing.Point(664, 12);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(51, 35);
-            this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.Text = "X";
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(669, 79);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(46, 34);
-            this.btnAgregar.TabIndex = 14;
-            this.btnAgregar.Text = "+";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label1
             // 
@@ -70,16 +49,6 @@ namespace PresentacionFerreti_l
             this.label1.Size = new System.Drawing.Size(106, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Productos Apartados";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(617, 79);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(46, 34);
-            this.btnBuscar.TabIndex = 19;
-            this.btnBuscar.Text = "busca";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
@@ -115,6 +84,40 @@ namespace PresentacionFerreti_l
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 15;
             this.label2.Text = "Buscar:";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackgroundImage = global::PresentacionFerreti_l.Properties.Resources.anadir;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregar.Location = new System.Drawing.Point(669, 79);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(46, 34);
+            this.btnAgregar.TabIndex = 14;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackgroundImage = global::PresentacionFerreti_l.Properties.Resources.buscar;
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBuscar.Location = new System.Drawing.Point(617, 79);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(46, 34);
+            this.btnBuscar.TabIndex = 19;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackgroundImage = global::PresentacionFerreti_l.Properties.Resources.cerrar;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCerrar.Location = new System.Drawing.Point(664, 12);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(51, 35);
+            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // FmrProductosA
             // 

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnSalir = new System.Windows.Forms.Button();
             this.Pedidos = new System.Windows.Forms.Label();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.dtgMostrar = new System.Windows.Forms.DataGridView();
-            this.BtnSalir = new System.Windows.Forms.Button();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -48,6 +48,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(802, 95);
             this.panel1.TabIndex = 10;
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.BackgroundImage = global::PresentacionFerreti_l.Properties.Resources.cerrar;
+            this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnSalir.Location = new System.Drawing.Point(717, 36);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(36, 30);
+            this.BtnSalir.TabIndex = 5;
+            this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // Pedidos
             // 
@@ -78,20 +89,9 @@
             this.dtgMostrar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMostrar_CellClick);
             this.dtgMostrar.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMostrar_CellEnter);
             // 
-            // BtnSalir
-            // 
-            //this.BtnSalir.BackgroundImage = global::PresentacionFerreti.Properties.Resources.cerrar;
-            this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnSalir.Location = new System.Drawing.Point(717, 36);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(36, 30);
-            this.BtnSalir.TabIndex = 5;
-            this.BtnSalir.UseVisualStyleBackColor = true;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
-            // 
             // BtnBuscar
             // 
-            //this.BtnBuscar.BackgroundImage = global::PresentacionFerreti.Properties.Resources.buscar;
+            this.BtnBuscar.BackgroundImage = global::PresentacionFerreti_l.Properties.Resources.buscar;
             this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnBuscar.Location = new System.Drawing.Point(686, 102);
             this.BtnBuscar.Name = "BtnBuscar";
@@ -102,7 +102,7 @@
             // 
             // BtnAgregar
             // 
-            //this.BtnAgregar.BackgroundImage = global::PresentacionFerreti.Properties.Resources.anadir;
+            this.BtnAgregar.BackgroundImage = global::PresentacionFerreti_l.Properties.Resources.anadir;
             this.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnAgregar.Location = new System.Drawing.Point(728, 102);
             this.BtnAgregar.Name = "BtnAgregar";
@@ -123,7 +123,7 @@
             this.Controls.Add(this.dtgMostrar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmPedidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPedidos";

@@ -52,12 +52,13 @@ namespace PresentacionFerreti_l
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.IndianRed;
+            this.btnCerrar.BackgroundImage = global::PresentacionFerreti_l.Properties.Resources.cerrar;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCerrar.Location = new System.Drawing.Point(318, 12);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(51, 35);
             this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.Text = "X";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 

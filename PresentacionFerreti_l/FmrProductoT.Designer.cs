@@ -43,22 +43,24 @@ namespace PresentacionFerreti_l
             // 
             // btnCerrar
             // 
+            this.btnCerrar.BackgroundImage = global::PresentacionFerreti_l.Properties.Resources.cerrar;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCerrar.Location = new System.Drawing.Point(664, 12);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(51, 35);
             this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.Text = "X";
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackgroundImage = global::PresentacionFerreti_l.Properties.Resources.anadir;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAgregar.Location = new System.Drawing.Point(669, 80);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(46, 34);
             this.btnAgregar.TabIndex = 8;
-            this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
@@ -73,11 +75,12 @@ namespace PresentacionFerreti_l
             // 
             // btnBuscar
             // 
+            this.btnBuscar.BackgroundImage = global::PresentacionFerreti_l.Properties.Resources.buscar;
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBuscar.Location = new System.Drawing.Point(617, 80);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(46, 34);
             this.btnBuscar.TabIndex = 13;
-            this.btnBuscar.Text = "busca";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbVerificar = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -36,18 +38,12 @@
             this.TxtCantidad = new System.Windows.Forms.TextBox();
             this.TxtCliente = new System.Windows.Forms.TextBox();
             this.BtnGuardar = new System.Windows.Forms.Button();
-            this.cmbVerificar = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.cmbVerificar);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.BtnSalir);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -55,8 +51,27 @@
             this.panel1.Size = new System.Drawing.Size(471, 95);
             this.panel1.TabIndex = 19;
             // 
+            // cmbVerificar
+            // 
+            this.cmbVerificar.Enabled = false;
+            this.cmbVerificar.FormattingEnabled = true;
+            this.cmbVerificar.Location = new System.Drawing.Point(249, 127);
+            this.cmbVerificar.Name = "cmbVerificar";
+            this.cmbVerificar.Size = new System.Drawing.Size(90, 33);
+            this.cmbVerificar.TabIndex = 25;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(31, 135);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(208, 25);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Cantidad disponible:";
+            // 
             // BtnSalir
             // 
+            this.BtnSalir.BackgroundImage = global::PresentacionFerreti_l.Properties.Resources.cerrar;
             this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnSalir.Location = new System.Drawing.Point(415, 31);
             this.BtnSalir.Name = "BtnSalir";
@@ -78,7 +93,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(63, 152);
+            this.label3.Location = new System.Drawing.Point(59, 197);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 25);
             this.label3.TabIndex = 24;
@@ -87,7 +102,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 118);
+            this.label2.Location = new System.Drawing.Point(59, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 25);
             this.label2.TabIndex = 23;
@@ -95,21 +110,21 @@
             // 
             // TxtCantidad
             // 
-            this.TxtCantidad.Location = new System.Drawing.Point(167, 152);
+            this.TxtCantidad.Location = new System.Drawing.Point(163, 197);
             this.TxtCantidad.Name = "TxtCantidad";
             this.TxtCantidad.Size = new System.Drawing.Size(233, 31);
             this.TxtCantidad.TabIndex = 22;
             // 
             // TxtCliente
             // 
-            this.TxtCliente.Location = new System.Drawing.Point(167, 118);
+            this.TxtCliente.Location = new System.Drawing.Point(163, 163);
             this.TxtCliente.Name = "TxtCliente";
             this.TxtCliente.Size = new System.Drawing.Size(233, 31);
             this.TxtCliente.TabIndex = 21;
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.Location = new System.Drawing.Point(209, 214);
+            this.BtnGuardar.Location = new System.Drawing.Point(167, 240);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(99, 44);
             this.BtnGuardar.TabIndex = 20;
@@ -117,39 +132,15 @@
             this.BtnGuardar.UseVisualStyleBackColor = true;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
-            // cmbVerificar
-            // 
-            this.cmbVerificar.Enabled = false;
-            this.cmbVerificar.FormattingEnabled = true;
-            this.cmbVerificar.Location = new System.Drawing.Point(246, 62);
-            this.cmbVerificar.Name = "cmbVerificar";
-            this.cmbVerificar.Size = new System.Drawing.Size(90, 33);
-            this.cmbVerificar.TabIndex = 25;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 70);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(208, 25);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Cantidad disponible:";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.panel2.Location = new System.Drawing.Point(318, 58);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(31, 37);
-            this.panel2.TabIndex = 26;
-            // 
             // FrmAddPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 296);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.cmbVerificar);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtCantidad);
             this.Controls.Add(this.TxtCliente);
@@ -180,6 +171,5 @@
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.ComboBox cmbVerificar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel2;
     }
 }
