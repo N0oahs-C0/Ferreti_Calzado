@@ -1,0 +1,452 @@
+DROP DATABASE if EXISTS ferreti;
+CREATE DATABASE ferreti;
+USE ferreti;
+
+DROP TABLE if EXISTS pedidos;
+CREATE TABLE pedidos(
+id INT PRIMARY KEY AUTO_INCREMENT  NOT NULL,
+cliente VARCHAR(50),
+cantidad INT,
+fecha_hora DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP); 
+
+DROP TABLE if EXISTS productos_terminados;
+CREATE TABLE productos_terminados(
+id INT PRIMARY KEY AUTO_INCREMENT  NOT NULL,
+producto VARCHAR(50),
+cantidad INT);
+
+DROP TABLE if EXISTS almacen_insumos;
+CREATE TABLE almacen_insumos(
+id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+nombre VARCHAR(50),
+cantidad INT,
+costo INT, 
+cantidad_necesaria_x_par INT);
+
+DROP TABLE if EXISTS compra_insumos;
+CREATE TABLE compra_insumos(
+id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+fkpedido INT,
+fkinsumo INT NOT NULL,
+FOREIGN KEY(fkpedido) REFERENCES pedidos(id),
+FOREIGN KEY(fkinsumo) REFERENCES almacen_insumos(id),
+cantidad INT,
+fecha_hora DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP);
+
+DROP TABLE if EXISTS productos_apartados;
+CREATE TABLE productos_apartados(
+id INT PRIMARY KEY AUTO_INCREMENT  NOT NULL,
+cantidad INT,
+fkpedido INT NOT NULL,
+FOREIGN KEY(fkpedido) REFERENCES pedidos(id),
+fecha_hora DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP);
+
+DROP TABLE if EXISTS ventas;
+CREATE TABLE Ventas(
+id INT PRIMARY KEY AUTO_INCREMENT  NOT NULL,
+fkpedido INT NOT NULL,
+FOREIGN KEY(fkpedido) REFERENCES pedidos(id),
+fecha_hora DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP);
+
+SHOW TABLES; 
+
+-- TRIGGERS -------------------------------------------------------------------------------------------------------------
+
+delimiter $$
+DROP TRIGGER if EXISTS verificar_pedidos;
+CREATE TRIGGER verificar_pedidos
+AFTER INSERT ON pedidos
+FOR EACH ROW 
+BEGIN 
+	DECLARE terminados INT; DECLARE faltan INT;
+	
+	DECLARE pares1 INT; DECLARE pares2 INT; DECLARE pares3 INT; DECLARE pares4 INT; DECLARE pares5 INT; 
+	DECLARE pares6 INT; DECLARE pares7 INT; DECLARE pares8 INT; DECLARE pares9 INT; DECLARE pares10 INT; 
+	
+	DECLARE compra1 INT; DECLARE compra2 INT; DECLARE compra3 INT; DECLARE compra4 INT; DECLARE compra5 INT;
+	DECLARE compra6 INT; DECLARE compra7 INT; DECLARE compra8 INT; DECLARE compra9 INT; DECLARE compra10 INT;
+	
+	DECLARE cantidad1 INT; DECLARE cantidad2 INT; DECLARE cantidad3 INT; DECLARE cantidad4 INT; DECLARE cantidad5 INT;
+	DECLARE cantidad6 INT; DECLARE cantidad7 INT; DECLARE cantidad8 INT; DECLARE cantidad9 INT; DECLARE cantidad10 INT;
+	
+	SELECT cantidad FROM productos_terminados WHERE id = 1 INTO terminados;
+	
+	if terminados < NEW.cantidad then
+	-- se ocupa comprar insumos:
+	UPDATE productos_terminados SET cantidad = 0 WHERE id = 1;
+	INSERT INTO productos_apartados VALUES(NULL, terminados, NEW.id, DEFAULT);
+	SELECT NEW.cantidad - terminados INTO faltan;
+
+   SELECT FLOOR (cantidad_necesaria_x_par * faltan) FROM almacen_insumos WHERE id = 1 INTO pares1;
+   SELECT FLOOR (cantidad_necesaria_x_par * faltan) FROM almacen_insumos WHERE id = 2 INTO pares2;
+   SELECT FLOOR (cantidad_necesaria_x_par * faltan) FROM almacen_insumos WHERE id = 3 INTO pares3;
+	SELECT FLOOR (cantidad_necesaria_x_par * faltan) FROM almacen_insumos WHERE id = 4 INTO pares4;
+	SELECT FLOOR (cantidad_necesaria_x_par * faltan) FROM almacen_insumos WHERE id = 5 INTO pares5;
+	SELECT FLOOR (cantidad_necesaria_x_par * faltan) FROM almacen_insumos WHERE id = 6 INTO pares6;
+	SELECT FLOOR (cantidad_necesaria_x_par * faltan) FROM almacen_insumos WHERE id = 7 INTO pares7;
+	SELECT FLOOR (cantidad_necesaria_x_par * faltan) FROM almacen_insumos WHERE id = 8 INTO pares8;
+	SELECT FLOOR (cantidad_necesaria_x_par * faltan) FROM almacen_insumos WHERE id = 9 INTO pares9;
+	SELECT FLOOR (cantidad_necesaria_x_par * faltan) FROM almacen_insumos WHERE id = 10 INTO pares10;
+	
+	SELECT cantidad FROM almacen_insumos WHERE id = 1 INTO cantidad1;
+	SELECT cantidad FROM almacen_insumos WHERE id = 2 INTO cantidad2;
+	SELECT cantidad FROM almacen_insumos WHERE id = 3 INTO cantidad3;
+	SELECT cantidad FROM almacen_insumos WHERE id = 4 INTO cantidad4;
+	SELECT cantidad FROM almacen_insumos WHERE id = 5 INTO cantidad5;
+	SELECT cantidad FROM almacen_insumos WHERE id = 6 INTO cantidad6;
+	SELECT cantidad FROM almacen_insumos WHERE id = 7 INTO cantidad7;
+	SELECT cantidad FROM almacen_insumos WHERE id = 8 INTO cantidad8;
+	SELECT cantidad FROM almacen_insumos WHERE id = 9 INTO cantidad9;
+	SELECT cantidad FROM almacen_insumos WHERE id = 10 INTO cantidad10;
+	
+		if cantidad1 < pares1 then 
+   	SELECT FLOOR (cantidad_necesaria_x_par * faltan) - cantidad1 FROM almacen_insumos WHERE id = 1 INTO compra1;
+   	INSERT INTO compra_insumos VALUES(NULL, NEW.id, 1, compra1, DEFAULT);
+		END if;
+		if cantidad2 < pares2 then 
+   	SELECT FLOOR (cantidad_necesaria_x_par * faltan) - cantidad2 FROM almacen_insumos WHERE id = 2 INTO compra2;
+   	INSERT INTO compra_insumos VALUES(NULL, NEW.id, 2, compra2, DEFAULT);
+		END if;
+		if cantidad3 < pares3 then 
+   	SELECT FLOOR (cantidad_necesaria_x_par * faltan) - cantidad3 FROM almacen_insumos WHERE id = 3 INTO compra3;
+   	INSERT INTO compra_insumos VALUES(NULL, NEW.id, 3, compra3, DEFAULT);
+		END if;
+		if cantidad4 < pares4 then 
+   	SELECT FLOOR (cantidad_necesaria_x_par * faltan) - cantidad4 FROM almacen_insumos WHERE id = 4 INTO compra4;
+   	INSERT INTO compra_insumos VALUES(NULL, NEW.id, 4, compra4, DEFAULT);
+		END if;
+		if cantidad5 < pares5 then 
+   	SELECT FLOOR (cantidad_necesaria_x_par * faltan) - cantidad5 FROM almacen_insumos WHERE id = 5 INTO compra5;
+   	INSERT INTO compra_insumos VALUES(NULL, NEW.id, 5, compra5, DEFAULT);
+		END if;
+		if cantidad6 < pares6 then 
+   	SELECT FLOOR (cantidad_necesaria_x_par * faltan) - cantidad6 FROM almacen_insumos WHERE id = 6 INTO compra6;
+   	INSERT INTO compra_insumos VALUES(NULL, NEW.id, 6, compra6, DEFAULT);
+		END if;
+		if cantidad7 < pares7 then 
+   	SELECT FLOOR (cantidad_necesaria_x_par * faltan) - cantidad7 FROM almacen_insumos WHERE id = 7 INTO compra7;
+   	INSERT INTO compra_insumos VALUES(NULL, NEW.id, 7, compra7, DEFAULT);
+		END if;
+		if cantidad8 < pares8 then 
+   	SELECT FLOOR (cantidad_necesaria_x_par * faltan) - cantidad8 FROM almacen_insumos WHERE id = 8 INTO compra8;
+   	INSERT INTO compra_insumos VALUES(NULL, NEW.id, 8, compra8, DEFAULT);
+		END if;
+		if cantidad9 < pares9 then 
+   	SELECT FLOOR (cantidad_necesaria_x_par * faltan) - cantidad9 FROM almacen_insumos WHERE id = 9 INTO compra9;
+   	INSERT INTO compra_insumos VALUES(NULL, NEW.id, 9, compra9, DEFAULT);
+		END if;
+		if cantidad10 < pares10 then 
+   	SELECT FLOOR (cantidad_necesaria_x_par * faltan) - cantidad10 FROM almacen_insumos WHERE id = 10 INTO compra10;
+   	INSERT INTO compra_insumos VALUES(NULL, NEW.id, 10, compra10, DEFAULT);
+		END if;
+	UPDATE productos_terminados SET cantidad = cantidad - faltan WHERE id = 1;
+	INSERT INTO productos_apartados VALUES(NULL, faltan, NEW.id, DEFAULT);
+	INSERT INTO ventas VALUES(NULL, NEW.id, DEFAULT);
+	END if;
+	
+	if terminados >= NEW.cantidad then 
+	-- no se ocupa comprar insumos:
+	UPDATE productos_terminados SET cantidad = cantidad - NEW.cantidad WHERE id = 1;
+	INSERT INTO ventas VALUES(NULL, NEW.id, DEFAULT);
+	END if;
+END; $$
+/*
+SELECT FLOOR (cantidad_necesaria_x_par * 16) - 93 FROM almacen_insumos WHERE id = 9;
+SELECT cantidad FROM almacen_insumos WHERE id = 9;
+
+UPDATE almacen_insumos SET cantidad = 0;
+DELETE FROM compra_insumos;
+DELETE FROM ventas;
+DELETE FROM productos_apartados;
+DELETE FROM pedidos;
+UPDATE productos_terminados SET cantidad = 0 WHERE id = 1;*/
+
+INSERT INTO pedidos VALUES(NULL, 'Alfred', 20, DEFAULT);
+SELECT * FROM pedidos;
+SELECT * FROM compra_insumos;
+SELECT * FROM almacen_insumos;
+SELECT * FROM productos_terminados;
+SELECT * FROM productos_apartados;
+SELECT * FROM ventas;
+/*
+SELECT cantidad_necesaria_x_par FROM almacen_insumos WHERE id = 2;
+SELECT cantidad FROM almacen_insumos WHERE id = 2;
+SELECT FLOOR (cantidad / cantidad_necesaria_x_par) FROM almacen_insumos WHERE id = 2;
+SELECT FLOOR (cantidad_necesaria_x_par * 200) - cantidad FROM almacen_insumos WHERE id = 2;*/
+
+delimiter $$
+DROP TRIGGER if EXISTS produccion_zapatos;
+CREATE TRIGGER produccion_zapatos
+AFTER INSERT ON compra_insumos
+FOR EACH ROW 
+BEGIN 
+	DECLARE minimo INT;
+	UPDATE almacen_insumos SET cantidad = cantidad + NEW.cantidad WHERE id = NEW.fkinsumo;
+	SELECT MIN(cantidad / cantidad_necesaria_x_par) FROM almacen_insumos INTO minimo;
+   UPDATE almacen_insumos SET cantidad = cantidad - (minimo * cantidad_necesaria_x_par);
+	UPDATE productos_terminados SET cantidad = cantidad + minimo WHERE id = 1;
+END; $$
+/*
+UPDATE productos_terminados SET cantidad = 4 WHERE id = 1;
+SELECT * FROM compra_insumos;
+SELECT * FROM almacen_insumos;
+SELECT * FROM productos_terminados;
+
+SELECT MIN(cantidad / cantidad_necesaria_x_par) FROM almacen_insumos;
+
+UPDATE almacen_insumos SET cantidad = cantidad + (4 * cantidad_necesaria_x_par);
+SELECT * FROM almacen_insumos;*/
+
+delimiter $$
+DROP TRIGGER if EXISTS mensaje_verificacion;
+CREATE TRIGGER mensaje_verificacion
+AFTER INSERT ON productos_apartados
+FOR EACH ROW 
+BEGIN 
+END; $$
+
+SELECT * FROM productos_apartados WHERE fkpedido = 6;
+Call p_showcomprainsumos('%%')
+
+SELECT cantidad FROM productos_terminados WHERE id = 1;
+
+-- INSERTAR DATOS----------------------------------------------------------------------------------------------------------
+
+INSERT INTO productos_terminados VALUES(NULL, 'Par de zapatos', 0); 
+
+INSERT INTO almacen_insumos VALUES(NULL, 'Insumo 1', 0, 6, 5); 
+INSERT INTO almacen_insumos VALUES(NULL, 'Insumo 2', 0, 5, 7);
+INSERT INTO almacen_insumos VALUES(NULL, 'Insumo 3', 0, 4, 11); 
+INSERT INTO almacen_insumos VALUES(NULL, 'Insumo 4', 0, 2, 20); 
+INSERT INTO almacen_insumos VALUES(NULL, 'Insumo 5', 0, 5, 5); 
+INSERT INTO almacen_insumos VALUES(NULL, 'Insumo 6', 0, 5, 3); 
+INSERT INTO almacen_insumos VALUES(NULL, 'Insumo 7', 0, 3, 6); 
+INSERT INTO almacen_insumos VALUES(NULL, 'Insumo 8', 0, 6, 5); 
+INSERT INTO almacen_insumos VALUES(NULL, 'Insumo 9', 0, 2, 8); 
+INSERT INTO almacen_insumos VALUES(NULL, 'Insumo 10', 0, 5, 2);  
+SELECT * FROM almacen_insumos;
+
+INSERT INTO compra_insumos VALUES(NULL, NULL, 1, 200, DEFAULT);
+INSERT INTO compra_insumos VALUES(NULL, NULL, 2, 125, DEFAULT);
+INSERT INTO compra_insumos VALUES(NULL, NULL, 3, 250, DEFAULT);
+INSERT INTO compra_insumos VALUES(NULL, NULL, 4, 300, DEFAULT);
+INSERT INTO compra_insumos VALUES(NULL, NULL, 5, 125, DEFAULT);
+INSERT INTO compra_insumos VALUES(NULL, NULL, 6, 100, DEFAULT);
+INSERT INTO compra_insumos VALUES(NULL, NULL, 7, 50, DEFAULT);
+INSERT INTO compra_insumos VALUES(NULL, NULL, 8, 20, DEFAULT);
+INSERT INTO compra_insumos VALUES(NULL, NULL, 9, 125, DEFAULT);
+INSERT INTO compra_insumos VALUES(NULL, NULL, 10, 110, DEFAULT);
+SELECT * FROM compra_insumos;
+SELECT * FROM almacen_insumos;
+SELECT * FROM productos_terminados;
+
+-- PROCEDURES -------------------------------------------------------------------------------------------------------------
+-- Deletes ---------------------------------------------------------------------------------------------------------------
+
+delimiter ;;
+DROP PROCEDURE if EXISTS DeletePedido;
+CREATE PROCEDURE DeletePedido(in p_id INT)
+BEGIN
+DELETE FROM pedidos WHERE id=p_id;
+END;;
+
+delimiter ;; 
+DROP PROCEDURE if EXISTS DeleteAlmacen_Insumos;
+CREATE PROCEDURE DeleteAlmacen_Insumos(IN p_id INT)
+BEGIN
+DELETE FROM almacen_insumos WHERE id=p_id;
+END;;
+
+delimiter ;;  
+DROP PROCEDURE if EXISTS p_deletecomprainsumos; 
+CREATE PROCEDURE p_deletecomprainsumos( 
+IN _id INT) 
+BEGIN 
+ DELETE FROM compra_insumos WHERE id=_id; 
+END;; 
+
+delimiter ;; 
+DROP PROCEDURE if EXISTS p_deleteproductoapartado; 
+CREATE PROCEDURE p_deleteproductoapartado( 
+IN _id INT) 
+BEGIN 
+ DELETE FROM productos_apartados WHERE id=_id; 
+END;; 
+
+delimiter ;;
+DROP PROCEDURE if EXISTS p_deleteventas; 
+CREATE PROCEDURE p_deleteventas( 
+IN _id INT) 
+BEGIN 
+ DELETE FROM ventas WHERE id=_id; 
+END;;
+
+delimiter ;;
+DROP PROCEDURE if EXISTS p_deleteproductoterminado; 
+CREATE PROCEDURE p_deleteproductoterminado( 
+IN _id INT) 
+BEGIN 
+ DELETE FROM productos_terminados WHERE id=_id; 
+END;;
+
+-- Inserts y Shows -------------------------------------------------------------------------------------------------------
+
+delimiter ;;
+DROP PROCEDURE if EXISTS InsertPedido;
+CREATE PROCEDURE InsertPedido( in p_id INT,
+in p_cliente VARCHAR(50),
+in p_cantidad INT)
+BEGIN 
+DECLARE X INT;
+SELECT COUNT(*) FROM pedidos WHERE id = p_id INTO X;
+if X<=0 AND p_id<=0 then
+INSERT INTO pedidos VALUES(NULL,p_cliente,p_cantidad,DEFAULT);
+ELSEIF X>0 then 
+UPDATE pedidos SET cliente=cliente, cantidad=p_cantidad, fecha_hora =DEFAULT WHERE id = p_id;
+END if;
+END;;
+DESCRIBE pedidos;
+
+delimiter ;; 
+DROP PROCEDURE if EXISTS SowPedidos;
+CREATE PROCEDURE ShowPedidos(IN filtro VARCHAR(100))
+BEGIN
+SELECT * FROM pedidos WHERE pedidos.cliente LIKE filtro;
+END;;
+
+DESCRIBE almacen_insumos;
+delimiter ;;
+DROP PROCEDURE if EXISTS InsertAlmacen_Insumos;
+CREATE PROCEDURE InsertAlmacen_Insumos(
+in p_id INT,
+in p_nombre VARCHAR(50),
+in p_cantidad INT,
+IN p_precio INT,
+IN p_cantidad_necesaria_x_par INT)
+BEGIN 
+DECLARE X INT;
+SELECT COUNT(*) FROM almacen_insumos WHERE id=p_id INTO X;
+if X<=0 AND p_id<0 then
+INSERT INTO almacen_insumos VALUES(NULL,p_nombre,p_cantidad,p_precio,p_cantidad_necesaria_x_par);
+ELSEIF X>0 then
+UPDATE almacen_insumos SET nombre=p_nombre, cantidad=p_cantidad, cantidad_necesaria_x_par = p_cantidad_necesaria_x_par, precio=p_precio WHERE id = p_id;
+END if;
+END;;
+
+delimiter ;;
+DROP PROCEDURE if EXISTS ShowAlmacen_Insumos;
+CREATE PROCEDURE ShowAlmacen_Insumos(IN filtro VARCHAR(100))
+BEGIN
+SELECT * FROM almacen_insumos WHERE almacen_insumos.nombre LIKE filtro;
+END;;
+
+delimiter ;; 
+DROP PROCEDURE if EXISTS P_InsertCompraInsumos; 
+CREATE PROCEDURE P_InsertCompraInsumos( 
+IN _id INT,IN _fkinsumo INT ,IN _cantidad INT) 
+BEGIN 
+ if _id<=0 then 
+ INSERT INTO compra_insumos VALUES(NULL,_fkinsumo,_cantidad,DEFAULT); 
+ ELSEIF _id>0 then  
+ UPDATE compra_insumos SET fkinsumo=_fkinsumo,cantidad=_cantidad,fecha_hora=DEFAULT WHERE id = _id; 
+ END if; 
+END;; 
+ 
+CALL P_InsertCompraInsumos(-1,2,30000); 
+ 
+delimiter ;; 
+DROP PROCEDURE if EXISTS p_showcomprainsumos; 
+CREATE PROCEDURE p_showcomprainsumos( 
+IN _filtro VARCHAR(100)) 
+BEGIN 
+ SELECT * FROM compra_insumos WHERE id LIKE _filtro;  
+END;; 
+ 
+CALL p_showcomprainsumos(50); 
+
+Call p_showcomprainsumos('%%')
+
+/*------------------------------------------------------------------*/ 
+delimiter ;; 
+DROP PROCEDURE if EXISTS P_InsertProductoApartado; 
+CREATE PROCEDURE P_InsertProductoApartado( 
+IN _id INT, IN _cantidad INT, IN _fkpedido INT) 
+BEGIN 
+ if _id<=0 then 
+ INSERT INTO productos_apartados VALUES(NULL,_cantidad,_fkpedido,DEFAULT); 
+ ELSEIF _id>0 then  
+ UPDATE productos_apartados SET cantidad=_cantidad,fkpedido=_fkpedido,fecha_hora=DEFAULT WHERE id = _id; 
+ END if; 
+END;; 
+ 
+CALL P_InsertProductoApartado(-1,8,1); 
+ 
+/*----------------------------------------------------------------------*/ 
+
+delimiter ;; 
+DROP PROCEDURE if EXISTS P_InsertVentas; 
+CREATE PROCEDURE P_InsertVentas( 
+IN _id INT, IN _fkpedido INT) 
+BEGIN 
+ if _id<=0 then 
+ INSERT INTO ventas VALUES(NULL,_fkpedido,DEFAULT); 
+ ELSEIF _id>0 then  
+ UPDATE ventas SET fkpedido=_fkpedido,fecha_hora=DEFAULT  WHERE id = _id; 
+ END if; 
+END;;
+ 
+CALL P_InsertVentas(-1,1); 
+ 
+/*------------------------------------------*/
+
+delimiter ;;
+DROP PROCEDURE if EXISTS P_InsertProductoTerminado; 
+CREATE PROCEDURE P_InsertProductoTerminado( 
+IN _id INT, IN _producto VARCHAR(50), IN _cantidad INT) 
+BEGIN 
+ if _id<=0 then 
+ INSERT INTO productos_terminados VALUES(NULL,_producto,_cantidad); 
+ ELSEIF _id>0 then  
+ UPDATE productos_terminados SET producto=_producto,cantidad=_cantidad WHERE id = _id; 
+ END if; 
+END;; 
+ 
+CALL P_InsertProductoTerminado(-1,'suela',100); 
+CALL P_InsertProductoTerminado(2,'suela',10); 
+ 
+delimiter ;;
+DROP PROCEDURE if EXISTS p_showproductoterminado; 
+CREATE PROCEDURE p_showproductoterminado( 
+IN _filtro VARCHAR(100)) 
+BEGIN 
+ SELECT * FROM productos_terminados WHERE producto LIKE _filtro;  
+END;;
+ 
+CALL p_showproductoterminado('%%');
+
+delimiter ;;
+DROP PROCEDURE if EXISTS p_showventas; 
+CREATE PROCEDURE p_showventas( 
+IN _filtro VARCHAR(50)) 
+BEGIN 
+ SELECT * FROM ventas WHERE fkpedido LIKE _filtro;  
+END;;
+ 
+CALL p_showventas('%%');
+
+delimiter ;;
+DROP PROCEDURE if EXISTS p_showproductoapartado; 
+CREATE PROCEDURE p_showproductoapartado( 
+IN _filtro VARCHAR(50)) 
+BEGIN 
+ SELECT * FROM productos_apartados WHERE fkpedido LIKE _filtro;  
+END;;
+ 
+CALL p_showproductoapartado('%%');
+
+
+SELECT * FROM almacen_insumos;
+SELECT * FROM compra_insumos;
+SELECT * FROM pedidos;
+
+Call ShowAlmacen_Insumos('%%');
