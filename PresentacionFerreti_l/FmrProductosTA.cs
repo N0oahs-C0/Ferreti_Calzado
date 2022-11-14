@@ -34,6 +34,7 @@ namespace PresentacionFerreti_l
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             mt.Guardar(new ProductosT(FmrProductoT.entidad.Id, (txtname.Text), int.Parse(txtcanti.Text)));
+            Close();
         }
     }
 }
