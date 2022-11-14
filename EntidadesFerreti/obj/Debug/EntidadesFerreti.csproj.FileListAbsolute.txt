@@ -16,3 +16,9 @@ C:\Users\musul\OneDrive\Escritorio\ferreti\Ferreti_Calzado\EntidadesFerreti\obj\
 C:\Users\musul\OneDrive\Escritorio\ferreti\Ferreti_Calzado\EntidadesFerreti\obj\Debug\EntidadesFerreti.csproj.CoreCompileInputs.cache
 C:\Users\musul\OneDrive\Escritorio\ferreti\Ferreti_Calzado\EntidadesFerreti\obj\Debug\EntidadesFerreti.dll
 C:\Users\musul\OneDrive\Escritorio\ferreti\Ferreti_Calzado\EntidadesFerreti\obj\Debug\EntidadesFerreti.pdb
+C:\Users\Spo0k\OneDrive\Escritorio\owo\Ferreti_Calzado\EntidadesFerreti\bin\Debug\EntidadesFerreti.dll
+C:\Users\Spo0k\OneDrive\Escritorio\owo\Ferreti_Calzado\EntidadesFerreti\bin\Debug\EntidadesFerreti.pdb
+C:\Users\Spo0k\OneDrive\Escritorio\owo\Ferreti_Calzado\EntidadesFerreti\obj\Debug\EntidadesFerreti.csproj.AssemblyReference.cache
+C:\Users\Spo0k\OneDrive\Escritorio\owo\Ferreti_Calzado\EntidadesFerreti\obj\Debug\EntidadesFerreti.csproj.CoreCompileInputs.cache
+C:\Users\Spo0k\OneDrive\Escritorio\owo\Ferreti_Calzado\EntidadesFerreti\obj\Debug\EntidadesFerreti.dll
+C:\Users\Spo0k\OneDrive\Escritorio\owo\Ferreti_Calzado\EntidadesFerreti\obj\Debug\EntidadesFerreti.pdb

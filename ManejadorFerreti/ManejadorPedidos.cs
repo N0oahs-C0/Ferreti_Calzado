@@ -37,7 +37,7 @@ namespace ManejadorFerreti
 
         public void Mostrar(DataGridView tabla, string filtro)
         {
-            tabla.Rows.Clear(); //error al darle en buscar mas de una vez
+            tabla.Columns.Clear(); //error al darle en buscar mas de una vez
             tabla.RowTemplate.Height = 30;
             tabla.DataSource = p.Mostrar(filtro).Tables["pedidos"];
             tabla.Columns.Insert(4, g.Boton("Editar",Color.FromArgb(137, 249, 59)));
