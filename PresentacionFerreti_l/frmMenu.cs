@@ -17,45 +17,45 @@ namespace PresentacionFerreti_l
             InitializeComponent();
         }
 
-        private void btnPedidos_Click(object sender, EventArgs e)
+        private void tsbPedidos_Click(object sender, EventArgs e)
         {
             FrmPedidos frm = new FrmPedidos();
             frm.ShowDialog();
         }
 
-        private void btnVentas_Click(object sender, EventArgs e)
+        private void TsbVentas_Click(object sender, EventArgs e)
         {
             FmrVentaas fa = new FmrVentaas();
             fa.ShowDialog();
         }
 
-        private void btnAlmacenInsumos_Click(object sender, EventArgs e)
+        private void TsbAlmacenInsumos_Click(object sender, EventArgs e)
         {
             FrmAlmacenInsumos frm = new FrmAlmacenInsumos();
             frm.ShowDialog();
         }
 
-        private void btnCompraInsumos_Click(object sender, EventArgs e)
+        private void tsbCompraInsumos_Click(object sender, EventArgs e)
         {
             FrmCompraInsumos frm = new FrmCompraInsumos();
             frm.ShowDialog();
         }
 
-        private void btnProductosTerminados_Click(object sender, EventArgs e)
+        private void tsbProductost_Click(object sender, EventArgs e)
         {
             FmrProductoT ft = new FmrProductoT();
             ft.ShowDialog();
         }
 
-        private void btnProductosApartados_Click(object sender, EventArgs e)
+        private void TsbProductA_Click(object sender, EventArgs e)
         {
             FmrProductosA fa = new FmrProductosA();
             fa.ShowDialog();
         }
 
-        private void frmMenu_Load(object sender, EventArgs e)
+        private void TspSalir_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }

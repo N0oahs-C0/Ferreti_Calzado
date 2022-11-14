@@ -29,99 +29,141 @@ namespace PresentacionFerreti_l
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnPedidos = new System.Windows.Forms.Button();
-            this.btnVentas = new System.Windows.Forms.Button();
-            this.btnAlmacenInsumos = new System.Windows.Forms.Button();
-            this.btnCompraInsumos = new System.Windows.Forms.Button();
-            this.btnProductosTerminados = new System.Windows.Forms.Button();
-            this.btnProductosApartados = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsbPedidos = new System.Windows.Forms.ToolStripButton();
+            this.TsbVentas = new System.Windows.Forms.ToolStripButton();
+            this.TsbAlmacenInsumos = new System.Windows.Forms.ToolStripButton();
+            this.tsbCompraInsumos = new System.Windows.Forms.ToolStripButton();
+            this.tsbProductost = new System.Windows.Forms.ToolStripButton();
+            this.TsbProductA = new System.Windows.Forms.ToolStripButton();
+            this.TspSalir = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnPedidos
+            // toolStrip1
             // 
-            this.btnPedidos.Location = new System.Drawing.Point(184, 71);
-            this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(75, 23);
-            this.btnPedidos.TabIndex = 0;
-            this.btnPedidos.Text = "Pedidos";
-            this.btnPedidos.UseVisualStyleBackColor = true;
-            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbPedidos,
+            this.TsbVentas,
+            this.TsbAlmacenInsumos,
+            this.tsbCompraInsumos,
+            this.tsbProductost,
+            this.TsbProductA,
+            this.TspSalir});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(953, 42);
+            this.toolStrip1.TabIndex = 6;
+            this.toolStrip1.Text = "toolStrip1";
             // 
-            // btnVentas
+            // tsbPedidos
             // 
-            this.btnVentas.Location = new System.Drawing.Point(321, 71);
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(75, 23);
-            this.btnVentas.TabIndex = 1;
-            this.btnVentas.Text = "Ventas";
-            this.btnVentas.UseVisualStyleBackColor = true;
-            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
+            this.tsbPedidos.AutoSize = false;
+            this.tsbPedidos.BackgroundImage = global::PresentacionFerreti_l.Properties.Resources.pedidos;
+            this.tsbPedidos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.tsbPedidos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbPedidos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbPedidos.Name = "tsbPedidos";
+            this.tsbPedidos.Size = new System.Drawing.Size(40, 40);
+            this.tsbPedidos.Text = "Pedidos";
+            this.tsbPedidos.Click += new System.EventHandler(this.tsbPedidos_Click);
             // 
-            // btnAlmacenInsumos
+            // TsbVentas
             // 
-            this.btnAlmacenInsumos.Location = new System.Drawing.Point(464, 71);
-            this.btnAlmacenInsumos.Name = "btnAlmacenInsumos";
-            this.btnAlmacenInsumos.Size = new System.Drawing.Size(132, 23);
-            this.btnAlmacenInsumos.TabIndex = 2;
-            this.btnAlmacenInsumos.Text = "Almacen de insumos";
-            this.btnAlmacenInsumos.UseVisualStyleBackColor = true;
-            this.btnAlmacenInsumos.Click += new System.EventHandler(this.btnAlmacenInsumos_Click);
+            this.TsbVentas.AutoSize = false;
+            this.TsbVentas.BackgroundImage = global::PresentacionFerreti_l.Properties.Resources.producto;
+            this.TsbVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.TsbVentas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TsbVentas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbVentas.Name = "TsbVentas";
+            this.TsbVentas.Size = new System.Drawing.Size(40, 40);
+            this.TsbVentas.Text = "Ventas";
+            this.TsbVentas.Click += new System.EventHandler(this.TsbVentas_Click);
             // 
-            // btnCompraInsumos
+            // TsbAlmacenInsumos
             // 
-            this.btnCompraInsumos.Location = new System.Drawing.Point(184, 150);
-            this.btnCompraInsumos.Name = "btnCompraInsumos";
-            this.btnCompraInsumos.Size = new System.Drawing.Size(118, 23);
-            this.btnCompraInsumos.TabIndex = 3;
-            this.btnCompraInsumos.Text = "Compra de insumos";
-            this.btnCompraInsumos.UseVisualStyleBackColor = true;
-            this.btnCompraInsumos.Click += new System.EventHandler(this.btnCompraInsumos_Click);
+            this.TsbAlmacenInsumos.AutoSize = false;
+            this.TsbAlmacenInsumos.BackgroundImage = global::PresentacionFerreti_l.Properties.Resources.almacen;
+            this.TsbAlmacenInsumos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.TsbAlmacenInsumos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TsbAlmacenInsumos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbAlmacenInsumos.Name = "TsbAlmacenInsumos";
+            this.TsbAlmacenInsumos.Size = new System.Drawing.Size(40, 40);
+            this.TsbAlmacenInsumos.Text = "Almacen Insumos";
+            this.TsbAlmacenInsumos.Click += new System.EventHandler(this.TsbAlmacenInsumos_Click);
             // 
-            // btnProductosTerminados
+            // tsbCompraInsumos
             // 
-            this.btnProductosTerminados.Location = new System.Drawing.Point(345, 150);
-            this.btnProductosTerminados.Name = "btnProductosTerminados";
-            this.btnProductosTerminados.Size = new System.Drawing.Size(142, 23);
-            this.btnProductosTerminados.TabIndex = 4;
-            this.btnProductosTerminados.Text = "Productos terminados";
-            this.btnProductosTerminados.UseVisualStyleBackColor = true;
-            this.btnProductosTerminados.Click += new System.EventHandler(this.btnProductosTerminados_Click);
+            this.tsbCompraInsumos.AutoSize = false;
+            this.tsbCompraInsumos.BackgroundImage = global::PresentacionFerreti_l.Properties.Resources.bolsa_de_la_compra;
+            this.tsbCompraInsumos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.tsbCompraInsumos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbCompraInsumos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCompraInsumos.Name = "tsbCompraInsumos";
+            this.tsbCompraInsumos.Size = new System.Drawing.Size(40, 40);
+            this.tsbCompraInsumos.Text = "Compra de Insumos";
+            this.tsbCompraInsumos.Click += new System.EventHandler(this.tsbCompraInsumos_Click);
             // 
-            // btnProductosApartados
+            // tsbProductost
             // 
-            this.btnProductosApartados.Location = new System.Drawing.Point(532, 150);
-            this.btnProductosApartados.Name = "btnProductosApartados";
-            this.btnProductosApartados.Size = new System.Drawing.Size(141, 23);
-            this.btnProductosApartados.TabIndex = 5;
-            this.btnProductosApartados.Text = "Produtos apartados";
-            this.btnProductosApartados.UseVisualStyleBackColor = true;
-            this.btnProductosApartados.Click += new System.EventHandler(this.btnProductosApartados_Click);
+            this.tsbProductost.AutoSize = false;
+            this.tsbProductost.BackgroundImage = global::PresentacionFerreti_l.Properties.Resources.producto_terminado;
+            this.tsbProductost.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.tsbProductost.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbProductost.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbProductost.Name = "tsbProductost";
+            this.tsbProductost.Size = new System.Drawing.Size(40, 40);
+            this.tsbProductost.Text = "Productos Terminados";
+            this.tsbProductost.Click += new System.EventHandler(this.tsbProductost_Click);
+            // 
+            // TsbProductA
+            // 
+            this.TsbProductA.AutoSize = false;
+            this.TsbProductA.BackgroundImage = global::PresentacionFerreti_l.Properties.Resources.caja;
+            this.TsbProductA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.TsbProductA.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TsbProductA.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbProductA.Name = "TsbProductA";
+            this.TsbProductA.Size = new System.Drawing.Size(40, 40);
+            this.TsbProductA.Text = "ProductoApartado";
+            this.TsbProductA.Click += new System.EventHandler(this.TsbProductA_Click);
+            // 
+            // TspSalir
+            // 
+            this.TspSalir.AutoSize = false;
+            this.TspSalir.BackgroundImage = global::PresentacionFerreti_l.Properties.Resources.cerrar;
+            this.TspSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.TspSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TspSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TspSalir.Name = "TspSalir";
+            this.TspSalir.Size = new System.Drawing.Size(40, 40);
+            this.TspSalir.Text = "Salir";
+            this.TspSalir.Click += new System.EventHandler(this.TspSalir_Click);
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnProductosApartados);
-            this.Controls.Add(this.btnProductosTerminados);
-            this.Controls.Add(this.btnCompraInsumos);
-            this.Controls.Add(this.btnAlmacenInsumos);
-            this.Controls.Add(this.btnVentas);
-            this.Controls.Add(this.btnPedidos);
+            this.ClientSize = new System.Drawing.Size(953, 550);
+            this.Controls.Add(this.toolStrip1);
             this.Name = "frmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenu";
-            this.Load += new System.EventHandler(this.frmMenu_Load);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnPedidos;
-        private System.Windows.Forms.Button btnVentas;
-        private System.Windows.Forms.Button btnAlmacenInsumos;
-        private System.Windows.Forms.Button btnCompraInsumos;
-        private System.Windows.Forms.Button btnProductosTerminados;
-        private System.Windows.Forms.Button btnProductosApartados;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton tsbPedidos;
+        private System.Windows.Forms.ToolStripButton TsbVentas;
+        private System.Windows.Forms.ToolStripButton TsbAlmacenInsumos;
+        private System.Windows.Forms.ToolStripButton tsbCompraInsumos;
+        private System.Windows.Forms.ToolStripButton tsbProductost;
+        private System.Windows.Forms.ToolStripButton TsbProductA;
+        private System.Windows.Forms.ToolStripButton TspSalir;
     }
 }
