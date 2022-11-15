@@ -155,3 +155,4 @@ C:\Users\Spo0k\OneDrive\Escritorio\owo\Ferreti_Calzado\PresentacionFerreti_l\obj
 C:\Users\Spo0k\OneDrive\Escritorio\owo\Ferreti_Calzado\PresentacionFerreti_l\obj\Debug\PresentacionFerreti_l.csproj.CopyComplete
 C:\Users\Spo0k\OneDrive\Escritorio\owo\Ferreti_Calzado\PresentacionFerreti_l\obj\Debug\PresentacionFerreti_l.exe
 C:\Users\Spo0k\OneDrive\Escritorio\owo\Ferreti_Calzado\PresentacionFerreti_l\obj\Debug\PresentacionFerreti_l.pdb
+C:\Users\Spo0k\OneDrive\Escritorio\owo\Ferreti_Calzado\PresentacionFerreti_l\obj\Debug\PresentacionFerreti_l.Properties.Resources.resources
